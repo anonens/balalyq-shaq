@@ -75,6 +75,7 @@ button,input,textarea,select{font:inherit;color:inherit}
   background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0));pointer-events:none}
 @supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.panel,.sec-head .lead{background:rgba(255,255,255,.9)}}
 @media (max-width:720px){*{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.panel,.sec-head .lead{background:rgba(255,255,255,.9)}}
+.lite *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.lite .panel,.lite .sec-head .lead{background:rgba(255,255,255,.9)}
 
 /* ---------- hero ---------- */
 .hero{padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:clamp(32px,5vw,64px)}
@@ -1205,7 +1206,7 @@ function initScene(){
   renderer.debug.checkShaderErrors = false;
   canvas.dataset.renderer = 'webgl'; document.documentElement.classList.add('has-3d');
   canvas.addEventListener('webglcontextlost', function(e){ e.preventDefault(); visible = false; canvas.hidden = true; initSceneFallback(); }, { once: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, small ? 1.25 : 1.75));
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, small ? 1.25 : 1.5));
   renderer.outputEncoding = T.sRGBEncoding;
   renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.06;
   var scene = new T.Scene();
@@ -1443,6 +1444,12 @@ function initScene(){
   function pm(o){ var m = new T.MeshStandardMaterial(o); m.color.convertSRGBToLinear(); if (m.emissive) m.emissive.convertSRGBToLinear(); return m; }
   var PK = { blue: pg(0x2f63d6, { roughness: .3 }), deep: pg(0x1c46a6, { roughness: .35 }), red: pg(0xe8343f), gold: pg(0xffc93c, { metalness: .25 }),
     dark: pg(0x163a8a, { roughness: .5 }), door: pg(0x7a1f26, { roughness: .5 }), white: pg(0xfff8ee), wood: pg(0x8a5a36, { roughness: .6 }) };
+  // repeated small parts share one draw call
+  function inst(geo, mat, n, place){
+    var m = new T.InstancedMesh(geo, mat, n), o = new T.Object3D();
+    for (var i = 0; i < n; i++){ o.position.set(0, 0, 0); o.rotation.set(0, 0, 0); o.scale.set(1, 1, 1); place(o, i); o.updateMatrix(); m.setMatrixAt(i, o.matrix); }
+    m.frustumCulled = false; return m;
+  }
   function stripes(n, a, b, w, h){ var tx = canvasTex(w || 256, h || 32), c = tx.c, sw = tx.cv.width / n; for (var i = 0; i < n; i++){ c.fillStyle = i % 2 ? b : a; c.fillRect(i * sw, 0, sw + 1, tx.cv.height); } tx.t.wrapS = T.RepeatWrapping; return tx.t; }
   function flag(color, h){
     var g = new T.Group(), pole = new T.Mesh(new T.CylinderGeometry(.025, .025, h, 6), PK.wood); pole.position.y = h / 2; g.add(pole);
@@ -1456,7 +1463,7 @@ function initScene(){
   function makeCastle(){
     var g = new T.Group();
     var keep = new T.Mesh(new T.BoxGeometry(2.6, 1.7, 1.3), PK.blue); keep.position.y = .85; g.add(keep);
-    for (var i = 0; i < 9; i++){ var m = new T.Mesh(new T.BoxGeometry(.17, .2, .17), PK.blue); m.position.set(-1.2 + i * .3, 1.8, .57); g.add(m); }
+    g.add(inst(new T.BoxGeometry(.17, .2, .17), PK.blue, 9, function(o, i){ o.position.set(-1.2 + i * .3, 1.8, .57); }));
     var gate = new T.Mesh(new T.CylinderGeometry(.34, .34, .1, 24, 1, false, 0, Math.PI), PK.door); gate.rotation.x = Math.PI / 2; gate.rotation.z = Math.PI; gate.position.set(0, .6, .66);
     var gateB = new T.Mesh(new T.BoxGeometry(.68, .6, .1), PK.door); gateB.position.set(0, .3, .66); g.add(gate, gateB);
     [[-1.35, .5, .42, 2.5, .55, 1.15], [1.35, .5, .42, 2.3, .55, 1.05], [0, -.25, .55, 3.2, .72, 1.5], [-.75, -.45, .3, 2.6, .4, .9], [.8, -.45, .3, 2.75, .4, .95]].forEach(function(r){
@@ -1483,7 +1490,8 @@ function initScene(){
     var body = new T.Mesh(new T.CylinderGeometry(1.15, 1.2, 1.1, 48, 1, true), pg(0xffffff, { map: stripe, side: T.DoubleSide, roughness: .45, clearcoat: .3 })); body.position.y = .55; g.add(body);
     var roofTex = stripes(16, '#e8343f', '#fff8ee');
     var roof = new T.Mesh(new T.ConeGeometry(1.42, 1.35, 48, 1, true), pg(0xffffff, { map: roofTex, side: T.DoubleSide, roughness: .45, clearcoat: .4 })); roof.position.y = 1.1 + .675; g.add(roof);
-    for (var i = 0; i < 24; i++){ var a = i / 24 * Math.PI * 2, b = new T.Mesh(new T.SphereGeometry(.09, 10, 8), i % 2 ? PK.gold : PK.red); b.position.set(Math.cos(a) * 1.4, 1.08, Math.sin(a) * 1.4); g.add(b); }
+    var bead = new T.SphereGeometry(.09, 10, 8);
+    [PK.red, PK.gold].forEach(function(mat, k){ g.add(inst(bead, mat, 12, function(o, i){ var a = (i * 2 + k) / 24 * Math.PI * 2; o.position.set(Math.cos(a) * 1.4, 1.08, Math.sin(a) * 1.4); })); });
     var door = new T.Mesh(new T.CylinderGeometry(.42, .42, .08, 24, 1, false, 0, Math.PI), PK.door); door.rotation.x = Math.PI / 2; door.rotation.z = Math.PI; door.position.set(0, .62, 1.17);
     var doorB = new T.Mesh(new T.BoxGeometry(.84, .62, .08), PK.door); doorB.position.set(0, .31, 1.17); g.add(door, doorB);
     var ball = new T.Mesh(new T.SphereGeometry(.1, 14, 10), PK.gold); ball.position.y = 2.48; g.add(ball);
@@ -1500,11 +1508,11 @@ function initScene(){
     [-.3, .3].forEach(function(z){
       var rim = new T.Mesh(new T.TorusGeometry(R, .05, 10, 96), PK.blue); rim.position.z = z; rot.add(rim);
       var inner = new T.Mesh(new T.TorusGeometry(R * .55, .03, 8, 64), PK.blue); inner.position.z = z; rot.add(inner);
-      for (var k = 0; k < 16; k++){ var a = k / 16 * Math.PI * 2, sp = new T.Mesh(new T.CylinderGeometry(.018, .018, R, 6), PK.blue); sp.position.set(Math.cos(a) * R / 2, Math.sin(a) * R / 2, z); sp.rotation.z = a - Math.PI / 2; rot.add(sp); }
     });
+    rot.add(inst(new T.CylinderGeometry(.018, .018, R, 6), PK.blue, 32, function(o, k){ var a = (k % 16) / 16 * Math.PI * 2; o.position.set(Math.cos(a) * R / 2, Math.sin(a) * R / 2, k < 16 ? -.3 : .3); o.rotation.z = a - Math.PI / 2; }));
     var hub = new T.Mesh(new T.CylinderGeometry(.22, .22, .7, 24), PK.red); hub.rotation.x = Math.PI / 2; rot.add(hub);
     var bulbs = pm({ color: 0xfff3b0, emissive: 0xffd34d, emissiveIntensity: .9 });
-    for (var b = 0; b < 32; b++){ var ab = b / 32 * Math.PI * 2, bl = new T.Mesh(new T.SphereGeometry(.035, 6, 4), bulbs); bl.position.set(Math.cos(ab) * R, Math.sin(ab) * R, .36); rot.add(bl); }
+    rot.add(inst(new T.SphereGeometry(.035, 6, 4), bulbs, 32, function(o, b){ var ab = b / 32 * Math.PI * 2; o.position.set(Math.cos(ab) * R, Math.sin(ab) * R, .36); }));
     var cars = [], N = 10;
     for (var c = 0; c < N; c++){
       var car = new T.Group(), cup = new T.Mesh(new T.CylinderGeometry(.24, .2, .26, 20), PK.gold); cup.position.y = -.32; car.add(cup);
@@ -1542,10 +1550,9 @@ function initScene(){
     var pts = [[-4.6, .4], [-3.8, 2.1], [-2.9, 2.6], [-2.1, 1.3], [-1.2, .7], [-.2, 1.9], [.6, 3.1], [1.5, 2.4], [2.2, 1.0], [3.1, .8], [3.9, 1.7], [4.6, .5]];
     var curve = new T.CatmullRomCurve3(pts.map(function(p){ return new T.Vector3(p[0], p[1], 0); }));
     [-.12, .12].forEach(function(z){ var rail = new T.Mesh(new T.TubeGeometry(curve, 200, .05, 8, false), PK.blue); rail.position.z = z; g.add(rail); });
-    for (var i = 0; i <= 60; i++){ var p = curve.getPointAt(i / 60);
-      var tie = new T.Mesh(new T.BoxGeometry(.04, .04, .3), PK.white); tie.position.copy(p); g.add(tie);
-      if (i % 3 === 0){ var sp = new T.Mesh(new T.CylinderGeometry(.03, .03, p.y + .6, 6), pg(0x5b8fe6)); sp.position.set(p.x, (p.y - .6) / 2, 0); g.add(sp); }
-    }
+    g.add(inst(new T.BoxGeometry(.04, .04, .3), PK.white, 61, function(o, i){ o.position.copy(curve.getPointAt(i / 60)); }));
+    var post = new T.CylinderGeometry(.03, .03, 1, 6);
+    g.add(inst(post, pg(0x5b8fe6), 21, function(o, i){ var p = curve.getPointAt(i * 3 / 60); o.position.set(p.x, (p.y - .6) / 2, 0); o.scale.y = p.y + .6; }));
     var train = [], tm = [PK.red, PK.gold, PK.red];
     for (var k = 0; k < 3; k++){ var cart = new T.Mesh(rbox(.34, .2, .3, .06), tm[k]); g.add(cart); train.push(cart); }
     var tan = new T.Vector3();
@@ -1617,9 +1624,23 @@ function initScene(){
   // loop
   var clock = new T.Clock(), camY = 0, visible = true;
   document.addEventListener('visibilitychange', function(){ visible = !document.hidden; if (visible) clock.getDelta(); });
-  function frame(){
+  // if the device can't keep up, render fewer pixels, then drop the glass blur
+  var perf = { last: 0, avg: 16, slow: 0, since: performance.now() + 2500 };
+  function adapt(now){
+    var ms = now - perf.last; perf.last = now;
+    if (now < perf.since || ms > 250) return;
+    perf.avg += (ms - perf.avg) * .1;
+    perf.slow = perf.avg > 24 ? perf.slow + ms : 0;
+    if (perf.slow < 1500) return;
+    perf.slow = 0; perf.since = now + 1000;
+    var pr = renderer.getPixelRatio();
+    if (pr > 1.01) renderer.setPixelRatio(Math.max(1, pr - .25));
+    else document.documentElement.classList.add('lite');
+  }
+  function frame(now){
     requestAnimationFrame(frame);
     if (!visible) return;
+    adapt(now || performance.now());
     var dt = Math.min(.05, clock.getDelta()), t = clock.elapsedTime;
     var target = -progress * WORLD;
     camY += (target - camY) * (reduce ? 1 : .1);
