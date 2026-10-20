@@ -74,6 +74,7 @@ button,input,textarea,select{font:inherit;color:inherit}
 .panel::before{content:"";position:absolute;inset:1px 1px auto 1px;height:42%;border-radius:calc(var(--r-lg) - 1px) calc(var(--r-lg) - 1px) 50% 50%/calc(var(--r-lg) - 1px) calc(var(--r-lg) - 1px) 24px 24px;
   background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0));pointer-events:none}
 @supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.panel,.sec-head .lead{background:rgba(255,255,255,.9)}}
+@media (max-width:720px){*{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.panel,.sec-head .lead{background:rgba(255,255,255,.9)}}
 
 /* ---------- hero ---------- */
 .hero{padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:clamp(32px,5vw,64px)}
@@ -1193,12 +1194,14 @@ function initScene(){
   var canvas = $('#scene');
   if (!window.THREE){ initSceneFallback(); return; }
   var T = THREE, renderer;
-  try { renderer = new T.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: 'default' }); }
+  var small = innerWidth < 720;
+  try { renderer = new T.WebGLRenderer({ canvas: canvas, antialias: !small, alpha: true, powerPreference: 'default' }); }
   catch(e){ initSceneFallback(); return; }
+  // reading shader logs forces each compile to finish synchronously, which stalls scrolling on phones
+  renderer.debug.checkShaderErrors = false;
   canvas.dataset.renderer = 'webgl'; document.documentElement.classList.add('has-3d');
   canvas.addEventListener('webglcontextlost', function(e){ e.preventDefault(); visible = false; canvas.hidden = true; initSceneFallback(); }, { once: true });
-  var small = innerWidth < 720;
-  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, small ? 1.5 : 1.75));
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, small ? 1.25 : 1.75));
   renderer.outputEncoding = T.sRGBEncoding;
   renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.06;
   var scene = new T.Scene();
@@ -1222,12 +1225,13 @@ function initScene(){
   var sun = new T.DirectionalLight(0xffffff, 1.2); sun.position.set(-6, 10, 8); scene.add(sun);
   var fill = new T.DirectionalLight(0xbfe6ff, .4); fill.position.set(8, -2, 6); scene.add(fill);
 
-  function gloss(color, o){ var m = { color: color, roughness: .22, metalness: 0, clearcoat: 1, clearcoatRoughness: .05, envMapIntensity: .55 }; for (var k in o) m[k] = o[k]; return new T.MeshPhysicalMaterial(m); }
+  function gloss(color, o){ var m = { color: color, roughness: .22, metalness: 0, clearcoat: 1, clearcoatRoughness: .05, envMapIntensity: .55 }; for (var k in o) m[k] = o[k]; if (small){ delete m.clearcoat; delete m.clearcoatRoughness; return new T.MeshStandardMaterial(m); } return new T.MeshPhysicalMaterial(m); }
   function rrect(w, h, r){ var s = new T.Shape(), x = -w / 2, y = -h / 2; s.moveTo(x + r, y); s.lineTo(x + w - r, y); s.quadraticCurveTo(x + w, y, x + w, y + r); s.lineTo(x + w, y + h - r); s.quadraticCurveTo(x + w, y + h, x + w - r, y + h); s.lineTo(x + r, y + h); s.quadraticCurveTo(x, y + h, x, y + h - r); s.lineTo(x, y + r); s.quadraticCurveTo(x, y, x + r, y); return s; }
   function rbox(w, h, d, r){ var bev = Math.min(r, d / 2.2) * .9; var g = new T.ExtrudeGeometry(rrect(w - 2 * bev, h - 2 * bev, Math.max(.01, r - bev)), { depth: Math.max(.01, d - 2 * bev), bevelEnabled: true, bevelThickness: bev, bevelSize: bev, bevelSegments: 4, curveSegments: 8 }); g.center(); return g; }
   function canvasTex(w, h, nearest){ var cv = document.createElement('canvas'); cv.width = w; cv.height = h; var t = new T.CanvasTexture(cv); t.encoding = T.sRGBEncoding; if (nearest){ t.magFilter = T.NearestFilter; t.minFilter = T.NearestFilter; t.generateMipmaps = false; } return { cv: cv, c: cv.getContext('2d'), t: t }; }
 
   var items = [], pickables = [], tickers = [], modelFactory = window.Nostalgia.createModels(T);
+  function near(y, fn){ return function(t){ if (Math.abs(camY - y) < 16) fn(t); }; }
   function add(obj, o){
     var it = { obj: obj, xf: 0, y: 0, z: 0, s: 1, rx: .2, ry: .4, rz: 0, sx: .1, sy: .25, sz: 0, spin: 0, focus: 0, phase: Math.random() * 6.28, bob: .22, fact: '' };
     for (var k in o) it[k] = o[k];
@@ -1255,7 +1259,7 @@ function initScene(){
     var base = new T.Mesh(new T.SphereGeometry(.22, 16, 10, 0, 6.283, 0, 1.57), gloss(0x22313f)); base.position.set(0, 1.07, 0); g.add(base);
     [-.55, .55].forEach(function(x){ var f = new T.Mesh(new T.CylinderGeometry(.12, .16, .14, 14), gloss(0x22313f)); f.position.set(x, -1.12, .4); g.add(f); });
     var ch = 0, last = -1, fr = 0;
-    tickers.push(function(t){
+    tickers.push(near(.7, function(t){
       fr++; if (fr % 3) return;
       var mode = Math.floor(t / 3.2) % 5, c = tx.c, W = 256, H = 192;
       if (mode === 1 || mode === 3){
@@ -1274,11 +1278,11 @@ function initScene(){
         c.strokeStyle = '#10223a'; c.lineWidth = 3; c.beginPath(); c.arc(128, by + 32, 12, .2, Math.PI - .2); c.stroke();
       } else {
         c.fillStyle = '#0d2b4c'; c.fillRect(0, 0, W, H); c.fillStyle = '#FFD23A'; c.font = '700 26px JUZ40, sans-serif'; c.textAlign = 'center';
-        c.fillText('Мультфильм', W / 2, 86); c.fillStyle = '#fff'; c.font = '500 20px JUZ40, sans-serif'; c.fillText('сағат 15:00-де', W / 2, 120);
+        c.fillText('Мультфильм', W / 2, 86); c.fillStyle = '#fff'; c.font = '500 20px JUZ40, sans-serif'; c.fillText('сағат 14:00-де', W / 2, 120);
       }
       for (var y = 0; y < H; y += 3){ c.fillStyle = 'rgba(0,0,0,.12)'; c.fillRect(0, y, W, 1); }
       tx.t.needsUpdate = true;
-    });
+    }));
     return g;
   }
   var asykGeo = null, asykTex = null;
@@ -1429,6 +1433,7 @@ function initScene(){
   var gt2 = canvasTex(256, 256); gt2.c.drawImage(gt.cv, 0, 0); gt2.c.fillStyle = 'rgba(30,90,20,.25)'; gt2.c.fillRect(0, 0, 256, 256); gt2.t.wrapS = gt2.t.wrapT = T.RepeatWrapping; gt2.t.repeat.set(20, 10);
   var hill2 = new T.Mesh(new T.SphereGeometry(30, 48, 24), gloss(0xffffff, { map: gt2.t, roughness: .75, clearcoat: .2, envMapIntensity: .25 })); hill2.position.set(-26, -WORLD - 33, -30); scene.add(hill2);
   // ----- fairytale park on the hill at the bottom -----
+  var sceneTickers = tickers; tickers = [];
   // park colours are picked in sRGB, so convert them for the linear pipeline
   function pg(c, o){ var m = gloss(c, o); m.color.convertSRGBToLinear(); return m; }
   function pm(o){ var m = new T.MeshStandardMaterial(o); m.color.convertSRGBToLinear(); if (m.emissive) m.emissive.convertSRGBToLinear(); return m; }
@@ -1550,6 +1555,8 @@ function initScene(){
   add(makeTent(), parkAt({ xf: -.18, z: -8.5, s: 1.1, ns: .8, ry: 0, fact: F.tent }));
   add(makeWheel(), parkAt({ xf: .46, z: -11, s: 1.15, ns: .8, ry: -.25, fact: F.wheel }));
   add(makeCarousel(), parkAt({ xf: .86, z: -8, s: 1, ry: 0, fact: F.carousel, wideOnly: true }));
+  var parkTickers = tickers; tickers = sceneTickers;
+  tickers.push(near(-WORLD - 4, function(t){ parkTickers.forEach(function(fn){ fn(t); }); }));
 
   // clouds
   var ctex = cloudTex(), clouds = [];
@@ -1597,6 +1604,11 @@ function initScene(){
     it.spin = Math.min(it.spin + 1.8, 3);
     toyFacts.show(it,e);
   });
+
+  var warmTimer = 0;
+  function warm(){ clearTimeout(warmTimer); warmTimer = setTimeout(function(){ try { renderer.compile(scene, camera); } catch(e){} }, 30); }
+  items.forEach(function(it){ if (it.obj.userData.ready) it.obj.userData.ready.then(warm); });
+  warm();
 
   // loop
   var clock = new T.Clock(), camY = 0, visible = true;
