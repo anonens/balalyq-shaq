@@ -1041,12 +1041,23 @@ function initShelf(){
       for(var i=bag.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),tmp=bag[i];bag[i]=bag[j];bag[j]=tmp;}
       if(bag.length>1 && bag[bag.length-1][0]===last){var swap=bag[0];bag[0]=bag[bag.length-1];bag[bag.length-1]=swap;}
     }
-    var row=bag.pop();last=row[0];card.dataset.filmId=String(row[0]);
-    $('#randomTitle').textContent=row[1];$('#randomEnglish').textContent=row[2];
-    $('#randomChannel').textContent=groups[row[3]] || groups[4];
-    $('#randomError').hidden=true;poster.alt=row[1]+' постері';poster.src=row[5];
-    if(!reduce && card.animate)card.animate([{opacity:.65,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:220,easing:'ease-out'});
+    var row=bag.pop(),turn=++turns;last=row[0];
+    // swap title and picture together, once the picture is ready (preloaded ones are instant)
+    function show(){
+      if(turn!==turns)return;
+      card.dataset.filmId=String(row[0]);
+      $('#randomTitle').textContent=row[1];$('#randomEnglish').textContent=row[2];
+      $('#randomChannel').textContent=groups[row[3]] || groups[4];
+      $('#randomError').hidden=true;poster.alt=row[1]+' постері';poster.src=row[5];
+      if(!reduce && card.animate)card.animate([{opacity:.65,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:220,easing:'ease-out'});
+      bag.slice(-2).forEach(function(next){preload(next[5]);});
+    }
+    var im=preload(row[5]);
+    if(im.complete && im.naturalWidth)show();
+    else{var done=false,go=function(){if(!done){done=true;show();}};im.addEventListener('load',go);im.addEventListener('error',go);setTimeout(go,1500);}
   }
+  var turns=0,cache={};
+  function preload(src){if(!cache[src]){cache[src]=new Image();cache[src].decoding='async';cache[src].src=src;}return cache[src];}
   // A little Disney mood on arrival, then the complete shuffled local collection.
   var first=rows.filter(function(row){return ['Toy Story','The Lion King','Aladdin','Finding Nemo'].indexOf(row[2])>=0;});
   if(first.length){var opening=first[Math.floor(Math.random()*first.length)];bag=rows.filter(function(row){return row[0]!==opening[0];});
@@ -1600,7 +1611,7 @@ function initScene(){
   layout(); window.addEventListener('resize', layout);
 
   // interaction
-  var ray = new T.Raycaster(), ndc = new T.Vector2(), mx = 0, my = 0, hoverAt = 0;
+  var ray = new T.Raycaster(), ndc = new T.Vector2(), hoverAt = 0;
   function hit(e){
     ndc.set(e.clientX / lastW * 2 - 1, -(e.clientY / lastH) * 2 + 1); ray.setFromCamera(ndc, camera);
     var h = ray.intersectObjects(pickables, true)[0], object = h && h.object;
@@ -1608,8 +1619,8 @@ function initScene(){
     return object ? object.userData.item : null;
   }
   window.addEventListener('pointermove', function(e){
+    // the scene moves only with scrolling; the pointer just shows what can be clicked
     if (e.pointerType !== 'mouse') return;
-    mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5;
     if (e.target !== canvas){ return; }
     var now = performance.now(); if (now - hoverAt < 60) return; hoverAt = now;
     canvas.style.cursor = hit(e) ? 'pointer' : '';
@@ -1648,8 +1659,7 @@ function initScene(){
     var target = -progress * WORLD;
     camY += (target - camY) * (reduce ? 1 : .1);
     camera.position.y = camY;
-    camera.position.x += ((reduce ? 0 : mx * 1.2) - camera.position.x) * .05;
-    camera.lookAt(camera.position.x * .3, camY - (reduce ? 0 : my * .4), 0);
+    camera.lookAt(0, camY, 0);
     scrollVel *= .9;
     var boost = reduce ? 0 : Math.abs(scrollVel) * 2;
     items.forEach(function(it){
