@@ -1,6 +1,7 @@
 (function (global) {
   'use strict';
   var TAU = Math.PI * 2;
+  var modelAssets = {};
 
   function loadImage(src) {
     var image = new Image();
@@ -12,65 +13,75 @@
     return { image: image, ready: ready };
   }
 
-  /* Use the actual photographed print, rather than the previous 1990s scans.
-     Sampling is done at render time; the uploaded reference is kept intact. */
+  /* Each chip has one print: full colour on the face and the very same pixels
+     in blue monochrome on the reverse. Original source files stay intact. */
   function createChips() {
     var source = loadImage('nostalgia/chips-reference.png');
+    var sponge = loadImage('posters/901.webp'), faces = {};
     var defs = [
-      { id: 'blue-48', name: 'SpongeBob · 48 point', series: 'Көк фишкалар', blue: true, point: 48 },
+      { id: 'blue-48', name: 'SpongeBob · 48 point', series: 'SpongeBob', blue: true, point: 48 },
       { id: 'hero-hulk', name: 'Hulk', series: 'Суперқаһармандар', blue: false, atk: 658522, def: 625482 },
-      { id: 'blue-13', name: 'SpongeBob · 13 point', series: 'Көк фишкалар', blue: true, point: 13 },
+      { id: 'blue-13', name: 'SpongeBob · 13 point', series: 'SpongeBob', blue: true, point: 13 },
       { id: 'hero-82', name: 'Hulk · Күш', series: 'Суперқаһармандар', blue: false, atk: 825482, def: 825482 },
-      { id: 'blue-22', name: 'SpongeBob · 22 point', series: 'Көк фишкалар', blue: true, point: 22 },
+      { id: 'blue-22', name: 'SpongeBob · 22 point', series: 'SpongeBob', blue: true, point: 22 },
       { id: 'hero-52', name: 'Hulk · Қорғаныс', series: 'Суперқаһармандар', blue: false, atk: 458452, def: 485256 },
-      { id: 'blue-02', name: 'SpongeBob · 02 point', series: 'Көк фишкалар', blue: true, point: 2 },
+      { id: 'blue-02', name: 'SpongeBob · 02 point', series: 'SpongeBob', blue: true, point: 2 },
       { id: 'hero-72', name: 'Hulk · Аула чемпионы', series: 'Суперқаһармандар', blue: false, atk: 525482, def: 585222 }
     ];
     defs.forEach(function (def, i) { def.n = i + 1; def.rare = i === 7; });
-    function draw(context, def, radius, back) {
-      var reverse = back === true;
+    function face(def) {
+      if (faces[def.id]) return faces[def.id];
+      var front = document.createElement('canvas'); front.width = front.height = 512;
+      var context = front.getContext('2d'), radius = 255;
+      context.translate(256, 256);
       context.save();
       context.beginPath(); context.arc(0, 0, radius, 0, TAU); context.clip();
       var gradient = context.createLinearGradient(-radius, -radius, radius, radius);
       gradient.addColorStop(0, '#edfaff'); gradient.addColorStop(.22, '#18b4eb');
       gradient.addColorStop(.51, '#e6faff'); gradient.addColorStop(.75, '#047ab8'); gradient.addColorStop(1, '#a9eaff');
       context.fillStyle = gradient; context.fillRect(-radius, -radius, radius * 2, radius * 2);
-      if (!reverse && source.image.complete && source.image.naturalWidth) {
+      var image = def.blue ? sponge.image : source.image;
+      if (image.complete && image.naturalWidth) {
         context.save();
         context.beginPath(); context.arc(0, 0, radius * .965, 0, TAU); context.clip();
         if (def.blue) {
-          context.rotate(-2.36);
-          context.drawImage(source.image, 704, 390, 329, 329, -radius, -radius, radius * 2, radius * 2);
+          context.drawImage(image, 285, 455, 285, 285, -radius, -radius, radius * 2, radius * 2);
         } else {
-          context.drawImage(source.image, 146, 957, 260, 260, -radius, -radius, radius * 2, radius * 2);
+          context.drawImage(image, 146, 957, 260, 260, -radius, -radius, radius * 2, radius * 2);
         }
         context.restore();
       }
-      if (reverse) {
-        for (var i = 0; i < 12; i++) {
-          context.save(); context.rotate(i * TAU / 12);
-          context.fillStyle = i % 2 ? '#ffffff60' : '#006da64d';
-          context.beginPath(); context.moveTo(0, 0); context.lineTo(radius, 0); context.lineTo(radius, radius * .3); context.fill();
-          context.restore();
-        }
-        context.fillStyle = '#ffffffdc'; context.beginPath(); context.arc(0, 0, radius * .69, 0, TAU); context.fill();
-        context.textAlign = 'center'; context.fillStyle = '#087fb8';
-        context.font = '900 ' + radius * .24 + 'px Arial, sans-serif';
-        context.fillText('POINT', 0, -radius * .2);
-        context.font = '900 ' + radius * .55 + 'px Arial, sans-serif';
-        context.fillText(def.blue ? String(def.point).padStart(2, '0') : '★', 0, radius * .31);
+      /* Score bands also keep the edge of the photographed hand out of view. */
+      context.fillStyle = def.blue ? '#ffe675' : '#102638f2';
+      context.fillRect(-radius, radius * (def.blue ? .45 : .58), radius * 2, radius * .55);
+      context.textAlign = 'center';
+      context.font = '900 ' + radius * (def.blue ? .18 : .105) + 'px Arial, sans-serif';
+      if (def.blue) {
+        context.fillStyle = '#073549'; context.fillText(String(def.point).padStart(2, '0') + ' point', 0, radius * .77);
       } else {
-        /* Score bands also keep the edge of the photographed hand out of view. */
-        context.fillStyle = def.blue ? '#e7faffee' : '#102638e8';
-        context.fillRect(-radius, radius * .58, radius * 2, radius * .42);
-        context.textAlign = 'center';
-        context.font = '900 ' + radius * (def.blue ? .21 : .115) + 'px Arial, sans-serif';
-        context.fillStyle = def.blue ? '#073549' : '#f7fcff';
-        context.fillText(def.blue ? String(def.point).padStart(2, '0') + ' point' : 'ATK ' + def.atk + '  DEF ' + def.def, 0, radius * .81);
+        context.fillStyle = '#ff8f75'; context.fillText('ATK ' + def.atk, 0, radius * .73);
+        context.fillStyle = '#f7fcff'; context.fillText('DEF ' + def.def, 0, radius * .89);
       }
       context.strokeStyle = '#f4fbffcc'; context.lineWidth = radius * .025;
       context.beginPath(); context.arc(0, 0, radius * .98, 0, TAU); context.stroke();
+      context.restore();
+      var reverse = document.createElement('canvas'); reverse.width = reverse.height = 512;
+      var blueContext = reverse.getContext('2d'); blueContext.drawImage(front, 0, 0);
+      var pixels = blueContext.getImageData(0, 0, 512, 512), data = pixels.data;
+      for (var i = 0; i < data.length; i += 4) {
+        var light = data[i] * .2126 + data[i + 1] * .7152 + data[i + 2] * .0722;
+        data[i] = 8 + light * .70; data[i + 1] = 43 + light * .72; data[i + 2] = 102 + light * .60;
+      }
+      blueContext.putImageData(pixels, 0, 0);
+      faces[def.id] = { front: front, back: reverse }; return faces[def.id];
+    }
+    var ready = Promise.all([source.ready, sponge.ready]).then(function () { faces = {}; });
+    function draw(context, def, radius, back) {
+      var pair = face(def);
+      context.save();
+      context.drawImage(back === true ? pair.back : pair.front, -radius, -radius, radius * 2, radius * 2);
       if (back === 'locked') {
+        context.beginPath(); context.arc(0, 0, radius, 0, TAU); context.clip();
         context.fillStyle = '#e9f4f0b0'; context.fillRect(-radius, -radius, radius * 2, radius * 2);
       }
       context.restore();
@@ -94,7 +105,7 @@
       c.bezierCurveTo(-.58 * r, .75 * r, -1.08 * r, .75 * r, -r, .25 * r); c.closePath();
     }
     return {
-      DEFS: defs, ready: source.ready, draw: draw, paint: paint, render: render,
+      DEFS: defs, ready: ready, draw: draw, paint: paint, render: render,
       pick: function () { return defs[Math.floor(Math.random() * defs.length)]; },
       asykShape: asykShape, setSprites: function () {}, setLogo: function () {}
     };
@@ -122,13 +133,12 @@
     return { show: show, hide: hide, current: function () { return selected; } };
   }
 
-  /* Small, real mesh models. The same factories serve the floating scene and
-     the courtyard viewer; no model CDN or third-party API is required. */
+  /* Shared local GLB assets and small mesh props for both scenes. */
   function createModels(T) {
     var materialCache = {};
     function material(color, options) {
       if (!options && materialCache[color]) return materialCache[color];
-      var settings = { color: color, roughness: .43, metalness: 0 };
+      var settings = { color: new T.Color(color).convertSRGBToLinear(), roughness: .43, metalness: 0 };
       for (var k in options) settings[k] = options[k];
       var result = new T.MeshStandardMaterial(settings);
       if (!options) materialCache[color] = result; return result;
@@ -175,19 +185,6 @@
       var mesh = new T.Mesh(new T.PlaneGeometry(w, h), new T.MeshBasicMaterial({ map: map, transparent: true, depthWrite: false }));
       mesh.position.set(x, y, z); group.add(mesh); return mesh;
     }
-    function eyes(group, y, z, skin) {
-      [-1, 1].forEach(function (side) {
-        ball(group, side * .105, y, z, .072, .085, .035, '#ffffff');
-        ball(group, side * .105, y - .004, z + .03, .032, .047, .015, skin || '#367f96');
-        ball(group, side * .105, y - .005, z + .044, .017, .031, .008, '#172235');
-        ball(group, side * .105 - .009, y + .018, z + .05, .009, .012, .005, '#ffffff');
-      });
-    }
-    function smile(group, y, z, color) {
-      var curve = new T.CatmullRomCurve3([new T.Vector3(-.065, y + .025, z), new T.Vector3(0, y, z + .01), new T.Vector3(.065, y + .025, z)]);
-      put(group, new T.TubeGeometry(curve, 10, .009, 5, false), color || '#a2524f');
-    }
-
     function makeSteve() {
       var group = new T.Group(), head = new T.Group(); group.add(head);
       var face = texture(16, 16, function (c) {
@@ -235,70 +232,6 @@
       [-1, 1].forEach(function (x) { [-1, 1].forEach(function (z) {
         var foot = new T.Mesh(new T.BoxGeometry(.32, .46, .42), bodyMat); foot.position.set(x * .23, -.7, z * .24); group.add(foot);
       }); });
-      return group;
-    }
-    function makeJake() {
-      var group = new T.Group(), skin = '#e7b590', blue = '#479cd5';
-      round(group, .61, .74, .38, '#f4f3e9', 0, .08, 0, .14);
-      round(group, .22, .67, .13, blue, -.22, .1, .21, .06); round(group, .22, .67, .13, blue, .22, .1, .21, .06);
-      label(group, 'J', .15, .08, -.22, .14, .325, '#f7f4e8');
-      ball(group, 0, .79, .02, .37, .42, .33, skin);
-      ball(group, -.31, .79, .02, .075, .11, .07, skin); ball(group, .31, .79, .02, .075, .11, .07, skin);
-      ball(group, -.28, .99, -.04, .13, .27, .25, '#65422a'); ball(group, .28, .99, -.04, .13, .27, .25, '#65422a');
-      eyes(group, .83, .31, '#76523b'); ball(group, 0, .73, .355, .06, .065, .065, skin); smile(group, .63, .317);
-      [-1, 1].forEach(function (side) {
-        var brow = round(group, .16, .036, .025, '#51372a', side * .115, .96, .315, .012); brow.rotation.z = -side * .09;
-      });
-      put(group, new T.SphereGeometry(.39, 24, 12, 0, TAU, 0, Math.PI / 2), '#e24438', 0, 1.04, 0);
-      round(group, .44, .07, .36, '#d33530', 0, 1.055, -.35, .06);
-      round(group, .32, .18, .04, '#faf7e9', 0, 1.15, .32, .04);
-      label(group, 'J', .12, .095, 0, 1.16, .385, '#d73836');
-      [-1, 1].forEach(function (side) {
-        rod(group, [side * .28, .32, 0], [side * .48, -.06, .05], .12, '#f5f5ed');
-        rod(group, [side * .48, -.06, .05], [side * .42, -.36, .19], .10, '#f5f5ed');
-        ball(group, side * .42, -.38, .19, .105, .12, .09, '#3e4b50');
-        round(group, .25, .72, .31, '#467bb0', side * .17, -.63, 0, .05);
-        round(group, .30, .18, .51, '#63a74b', side * .18, -1.04, .11, .06);
-        round(group, .32, .07, .53, '#f8f1df', side * .18, -1.13, .11, .025);
-        round(group, .27, .07, .12, '#d84236', side * .18, -1.02, .36, .025);
-      });
-      rod(group, [.43, -.3, .23], [.43, .06, .23], .075, '#79bf39');
-      ball(group, .43, .07, .23, .07, .04, .07, '#dededb');
-      return group;
-    }
-    function makeDoll(monster) {
-      var group = new T.Group(), skin = monster ? '#f2c2d4' : '#edbd9f', hair = monster ? '#25232f' : '#efc451', pink = monster ? '#e63f97' : '#f47dc0';
-      ball(group, 0, .82, .02, .28, .34, .26, skin);
-      ball(group, 0, .91, -.15, .32, .4, .23, hair);
-      [-1, 1].forEach(function (side) {
-        var lock = ball(group, side * .26, .49, -.16, .14, .65, .15, hair); lock.rotation.z = side * -.13;
-        if (monster) {
-          var stripe = ball(group, side * .31, .45, -.04, .048, .58, .06, pink); stripe.rotation.z = side * -.13;
-          ball(group, side * .30, .94, -.10, .13, .13, .12, pink);
-        }
-        ball(group, side * .19, 1.065, .14, .15, .08, .16, hair);
-      });
-      eyes(group, .86, .257, monster ? '#ab5e95' : '#398dca'); smile(group, .68, .246, '#c14977');
-      ball(group, 0, .77, .279, .035, .041, .035, skin);
-      rod(group, [0, .39, 0], [0, .55, 0], .08, skin);
-      put(group, new T.CylinderGeometry(.17, .22, .52, 16), pink, 0, .16, 0);
-      put(group, new T.CylinderGeometry(.21, .52, .63, 24), monster ? '#292434' : '#ef67b2', 0, -.40, 0);
-      [-1, 1].forEach(function (side) {
-        rod(group, [side * .17, .35, 0], [side * .34, -.02, .03], .065, skin);
-        rod(group, [side * .34, -.02, .03], [side * .28, -.32, .13], .055, skin);
-        ball(group, side * .28, -.34, .13, .064, .09, .05, skin);
-        rod(group, [side * .16, -.66, 0], [side * .17, -1.12, 0], .065, monster ? '#69505e' : skin);
-        round(group, .17, monster ? .29 : .12, .29, monster ? '#dd4496' : '#e84aa0', side * .17, -1.15, .06, .045);
-      });
-      if (monster) {
-        label(group, '♥', .10, .09, -.19, .72, .24, '#db4788');
-        round(group, .29, .10, .05, '#f3f2ee', 0, .39, .16, .02);
-      } else {
-        for (var i = 0; i < 9; i++) ball(group, Math.sin(i * .35 - 1.4) * .15, .39 - Math.cos(i * .35 - 1.4) * .065, .17, .018, .018, .018, '#fff2d2');
-        for (var j = 0; j < 10; j++) {
-          var a = j * TAU / 10; rod(group, [Math.sin(a) * .24, -.14, Math.cos(a) * .24], [Math.sin(a) * .49, -.68, Math.cos(a) * .49], .008, '#ffd4ed');
-        }
-      }
       return group;
     }
     function makeBird() {
@@ -352,11 +285,32 @@
       round(group, 1.5, .96, .025, '#101722', 0, -.03, -.20, .04);
       return group;
     }
-    var factories = {
-      jake: makeJake, steve: makeSteve, creeper: makeCreeper, sega: makeSega,
-      barbie: function () { return makeDoll(false); }, monster: function () { return makeDoll(true); }, bird: makeBird
-    };
-    return { make: function (key) { return factories[key] ? factories[key]() : makeSteve(); } };
+    var factories = { steve: makeSteve, creeper: makeCreeper, sega: makeSega, bird: makeBird };
+    function imported(key) {
+      var group = new T.Group(); group.userData.modelState = 'loading';
+      if (!modelAssets[key]) {
+        modelAssets[key] = new Promise(function (resolve, reject) {
+          if (!T.GLTFLoader) { reject(new Error('model_loader_unavailable')); return; }
+          new T.GLTFLoader().load('nostalgia/models/' + key + '.glb', function (gltf) {
+            resolve(gltf.scene);
+          }, undefined, reject);
+        });
+      }
+      group.userData.ready = modelAssets[key].then(function (original) {
+        var model = original.clone(true);
+        if (key === 'bmo') model.rotation.y += Math.PI;
+        var bounds = new T.Box3().setFromObject(model), size = bounds.getSize(new T.Vector3()), center = bounds.getCenter(new T.Vector3());
+        var extent = Math.max(size.x, size.y, size.z);
+        if (!isFinite(extent) || extent <= 0) throw new Error('empty_model');
+        model.position.sub(center);
+        var normalized = new T.Group(); normalized.add(model); normalized.scale.setScalar(2.6 / extent);
+        group.add(normalized); group.userData.modelState = 'ready'; return true;
+      }).catch(function () { group.userData.modelState = 'error'; return false; });
+      return group;
+    }
+    return { make: function (key) {
+      return key === 'jake' || key === 'bmo' || key === 'spongebob' ? imported(key) : (factories[key] || makeSteve)();
+    } };
   }
 
   var TOYS = [
@@ -364,8 +318,8 @@
     ['steve', 'Steve', 'Minecraft', 'Алғашқы үйің топырақтан еді. Бірақ өз үйің болатын.'],
     ['creeper', 'Creeper', 'Minecraft', 'Тссс… Артыңа бір қарап қой!'],
     ['sega', 'Sega', 'Қалтадағы ойын әлемі', 'Sonic, сақиналар және «тағы бір деңгей ғана».'],
-    ['barbie', 'Barbie', 'Қуыршақтар әлемі', 'Көйлек ауыстырып, қуыршақтарға үй жасайтын күндер.'],
-    ['monster', 'Draculaura', 'Monster High', 'Қара мен қызғылт шашы бар ең сүйікті қуыршақ.'],
+    ['bmo', 'BMO', 'Adventure Time', 'Кішкентай ойын приставкасы, үлкен қиял. Математикалық!'],
+    ['spongebob', 'SpongeBob', 'Бикини Боттом', '«Мен дайынмын!» — сол кездегі де, бүгінгі де көңіл күй.'],
     ['bird', 'Red', 'Angry Birds', 'Бір рогатка. Үш құс. Құламай тұрған соңғы мұнара.']
   ];
 
@@ -375,11 +329,8 @@
     else if (key === 'creeper') content = '<path d="M45 3H115V70H45Z" fill="#78bc49"/><path d="M55 71H105V124H55Z" fill="#589d3c"/><path d="M43 118H75V157H43ZM85 118H117V157H85Z" fill="#81c54c"/><path d="M57 25H73V41H57ZM87 25H103V41H87ZM72 41H88V57H72ZM64 49H76V64H64ZM84 49H96V64H84Z" fill="#142317"/>';
     else if (key === 'bird') content = '<path d="M54 43L57 12L73 38L80 8L88 41Z" fill="#dc3b30"/><ellipse cx="80" cy="92" rx="62" ry="54" fill="#e54135"/><ellipse cx="80" cy="119" rx="42" ry="26" fill="#fae2b9"/><ellipse cx="60" cy="79" rx="20" ry="23" fill="white"/><ellipse cx="100" cy="79" rx="20" ry="23" fill="white"/><circle cx="68" cy="81" r="7" fill="#211d25"/><circle cx="92" cy="81" r="7" fill="#211d25"/><path d="M35 52L79 64M125 52L81 64" stroke="#211d25" stroke-width="11"/><path d="M80 89L106 107L62 109Z" fill="#ffc346"/>';
     else if (key === 'jake') content = '<path d="M56 95H76V150H49ZM84 95H104L111 150H84Z" fill="#4d80b4"/><path d="M48 148H79V158H40ZM82 148H114V158H82Z" fill="#5baf51"/><path d="M46 61H113L122 104H34Z" fill="#f9f5df"/><path d="M49 61H70V109H49ZM90 61H111V109H90Z" fill="#479cd5"/><ellipse cx="80" cy="41" rx="29" ry="32" fill="#e9bc98"/><path d="M50 32C43 -4 118 -4 111 31Z" fill="#df463c"/><path d="M71 8H91V25H71Z" fill="#fff7e7"/><circle cx="70" cy="40" r="4" fill="#42352b"/><circle cx="91" cy="40" r="4" fill="#42352b"/><path d="M70 55Q80 62 91 55" fill="none" stroke="#9e5e4b" stroke-width="2"/>';
-    else if (key === 'barbie' || key === 'monster') {
-      var monster = key === 'monster', hair = monster ? '#292438' : '#edc25b', skirt = monster ? '#302735' : '#ed6eaf';
-      content = '<path d="M40 17Q80 -12 120 17V98H40Z" fill="' + hair + '"/><path d="M65 113H75V153H65ZM85 113H95V153H85Z" fill="#e8bda5"/><path d="M63 61H98L123 123H38Z" fill="' + skirt + '"/><path d="M63 59H98V87H63Z" fill="#f37bb6"/><ellipse cx="80" cy="36" rx="24" ry="29" fill="' + (monster ? '#edc0d6' : '#f0c6a6') + '"/><path d="M57 17Q77 32 104 14" fill="none" stroke="' + hair + '" stroke-width="13"/><circle cx="70" cy="35" r="4" fill="#5292ac"/><circle cx="90" cy="35" r="4" fill="#5292ac"/><path d="M72 49Q80 54 88 49" fill="none" stroke="#d05b87" stroke-width="2"/><path d="M59 151H77V158H55ZM84 151H101V158H84Z" fill="#dd4598"/>';
-      if (monster) content += '<path d="M45 14L37 105M115 14L122 105" stroke="#e7449d" stroke-width="10"/>';
-    }
+    else if (key === 'bmo') content = '<rect x="30" y="10" width="100" height="111" rx="12" fill="#59c3a7"/><rect x="43" y="22" width="74" height="51" rx="9" fill="#d4f4d6"/><circle cx="64" cy="43" r="3" fill="#243d40"/><circle cx="96" cy="43" r="3" fill="#243d40"/><path d="M70 55Q80 66 90 55" fill="none" stroke="#243d40" stroke-width="3"/><path d="M55 83V104M44 94H66" stroke="#f5db4f" stroke-width="7"/><circle cx="104" cy="99" r="9" fill="#e66167"/><path d="M56 121V149H46M103 121V149H113M30 80L13 111M130 80L147 111" fill="none" stroke="#59c3a7" stroke-width="10" stroke-linecap="round"/>';
+    else if (key === 'spongebob') content = '<path d="M31 12H129V104H31Z" fill="#f9dc3f"/><path d="M31 104H129V130H31Z" fill="#aa6a32"/><path d="M31 98H129V110H31Z" fill="white"/><ellipse cx="62" cy="49" rx="19" ry="23" fill="white"/><ellipse cx="101" cy="49" rx="19" ry="23" fill="white"/><circle cx="67" cy="50" r="8" fill="#64bdec"/><circle cx="96" cy="50" r="8" fill="#64bdec"/><circle cx="67" cy="50" r="4"/><circle cx="96" cy="50" r="4"/><path d="M49 77Q80 98 111 77" fill="none" stroke="#80512b" stroke-width="3"/><path d="M73 85V94H88V85" fill="white"/><path d="M54 130V149H38M108 130V149H124" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round"/><path d="M30 70L13 99M129 70L146 99" stroke="#f9dc3f" stroke-width="7"/><path d="M75 108L81 118L88 108L81 101Z" fill="#e95139"/>';
     return content ? '<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">' + content + '</svg>' : '';
   }
 
@@ -387,7 +338,7 @@
     var root = document.getElementById('memoryViewer'), canvas = document.getElementById('memoryCanvas');
     if (!root || !canvas) return;
     var buttons = root.querySelectorAll('[data-memory-toy]'), current = 'jake', renderer = null, T = global.THREE;
-    var scene, camera, group = null, models, rotation = -.18, dragging = false, moved = false, startX = 0;
+    var scene, camera, group = null, models, modelCache = {}, rotation = -.18, dragging = false, moved = false, startX = 0;
     function describe(key) {
       var row = TOYS.filter(function (toy) { return toy[0] === key; })[0] || TOYS[0];
       document.getElementById('memoryName').textContent = row[1];
@@ -397,28 +348,44 @@
       canvas.setAttribute('aria-label', row[1] + ' көлемді моделі. Айналдыру үшін сүйре.');
       return row;
     }
-    function dispose(object) {
-      object.traverse(function (mesh) { if (mesh.geometry) mesh.geometry.dispose(); });
+    var status = document.getElementById('memoryStatus');
+    function updateStatus(key, model) {
+      if (current !== key) return;
+      var state = model.userData.modelState || 'ready'; root.dataset.modelState = state;
+      status.hidden = state === 'ready';
+      status.textContent = state === 'error' ? 'Модель ашылмады. Басқа кейіпкерді таңдап көр.' : 'Кейіпкер жүктелуде…';
+      canvas.setAttribute('aria-busy', String(state === 'loading'));
     }
     function show(key) {
       current = key; describe(key);
       if (!renderer) return;
-      if (group) { scene.remove(group); dispose(group); }
-      group = models.make(key);
-      var bounds = new T.Box3().setFromObject(group), center = bounds.getCenter(new T.Vector3()), size = bounds.getSize(new T.Vector3());
-      group.position.sub(center); var wrapper = new T.Group(); wrapper.add(group);
-      wrapper.scale.setScalar(2.9 / Math.max(size.x, size.y, size.z));
-      group = wrapper; group.rotation.y = -.18; rotation = -.18; scene.add(group);
+      if (group) scene.remove(group);
+      if (!modelCache[key]) {
+        var model = models.make(key), wrapper = new T.Group(); wrapper.add(model);
+        modelCache[key] = wrapper;
+        function fit(loaded) {
+          if (loaded !== false) {
+            var bounds = new T.Box3().setFromObject(model), center = bounds.getCenter(new T.Vector3()), size = bounds.getSize(new T.Vector3());
+            var extent = Math.max(size.x, size.y, size.z);
+            if (isFinite(extent) && extent > 0) { model.position.sub(center); wrapper.scale.setScalar(2.9 / extent); }
+          }
+          updateStatus(key, model);
+        }
+        if (model.userData.ready) model.userData.ready.then(fit); else fit(true);
+      }
+      group = modelCache[key]; group.position.y = 0; group.rotation.y = -.18; rotation = -.18; scene.add(group);
+      updateStatus(key, group.children[0]);
     }
     buttons.forEach(function (button) { button.addEventListener('click', function () { facts.hide(); show(button.dataset.memoryToy); }); });
     try {
       if (!T) throw new Error('no_webgl');
       renderer = new T.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(global.devicePixelRatio || 1, 1.5)); renderer.outputEncoding = T.sRGBEncoding;
+      renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1;
       scene = new T.Scene(); camera = new T.PerspectiveCamera(32, 1, .1, 40); camera.position.set(0, .15, 7);
-      scene.add(new T.HemisphereLight('#f8f4ff', '#78a9a4', 1.1));
-      var light = new T.DirectionalLight('#ffffff', 2.0); light.position.set(-3, 4, 5); scene.add(light);
-      light = new T.DirectionalLight('#c8d8ff', .8); light.position.set(3, 0, -2); scene.add(light);
+      scene.add(new T.HemisphereLight('#f8f4ff', '#78a9a4', .65));
+      var light = new T.DirectionalLight('#ffffff', 1.1); light.position.set(-3, 4, 5); scene.add(light);
+      light = new T.DirectionalLight('#c8d8ff', .35); light.position.set(3, 0, -2); scene.add(light);
       models = createModels(T);
       function size() {
         var w = canvas.clientWidth || 360, h = canvas.clientHeight || 340;
@@ -457,7 +424,7 @@
       });
       canvas.addEventListener('webglcontextlost', function (event) { event.preventDefault(); root.classList.add('viewer-fallback'); });
     } catch (error) {
-      renderer = null; root.classList.add('viewer-fallback');
+      renderer = null; root.classList.add('viewer-fallback'); status.hidden = true;
       document.getElementById('memoryHint').textContent = 'Образды таңда — таныс естелікті оқы.';
     }
     show(current);
