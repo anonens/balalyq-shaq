@@ -1,0 +1,3016 @@
+{
+  "posters": [
+    {
+      "n": 1,
+      "ru": "Эй, Арнольд!",
+      "en": "Hey Arnold!",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/001_Hey_Arnold.jpg",
+      "source": "https://www.tvmaze.com/shows/6482/hey-arnold",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 2,
+      "ru": "Котопёс",
+      "en": "CatDog",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/002_CatDog.jpg",
+      "source": "https://www.tvmaze.com/shows/12449/catdog",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 3,
+      "ru": "Крутые бобры",
+      "en": "The Angry Beavers",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/003_The_Angry_Beavers.jpg",
+      "source": "https://www.tvmaze.com/shows/5041/the-angry-beavers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 4,
+      "ru": "Ох уж эти детки!",
+      "en": "Rugrats",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/004_Rugrats.jpg",
+      "source": "https://www.tvmaze.com/shows/421/rugrats",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 5,
+      "ru": "Детки подросли",
+      "en": "All Grown Up!",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/005_All_Grown_Up.jpg",
+      "source": "https://www.tvmaze.com/shows/12510/all-grown-up",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 6,
+      "ru": "Дикая семейка Торнберри",
+      "en": "The Wild Thornberrys",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/006_The_Wild_Thornberrys.jpg",
+      "source": "https://www.tvmaze.com/shows/18776/the-wild-thornberrys",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 7,
+      "ru": "Ракетная мощь",
+      "en": "Rocket Power",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/007_Rocket_Power.jpg",
+      "source": "https://www.tvmaze.com/shows/6323/rocket-power",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 8,
+      "ru": "Как говорит Джинджер",
+      "en": "As Told by Ginger",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/008_As_Told_by_Ginger.jpg",
+      "source": "https://www.tvmaze.com/shows/5914/as-told-by-ginger",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 9,
+      "ru": "Волшебные покровители",
+      "en": "The Fairly OddParents",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/009_The_Fairly_OddParents.jpg",
+      "source": "https://www.tvmaze.com/shows/2565/the-fairly-oddparents",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 10,
+      "ru": "Приключения Джимми Нейтрона, мальчика-гения",
+      "en": "The Adventures of Jimmy Neutron: Boy Genius",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/010_The_Adventures_of_Jimmy_Neutron_Boy_Genius.jpg",
+      "source": "https://www.tvmaze.com/shows/7457/the-adventures-of-jimmy-neutron-boy-genius",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 11,
+      "ru": "Дэнни-призрак",
+      "en": "Danny Phantom",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/011_Danny_Phantom.jpg",
+      "source": "https://www.tvmaze.com/shows/6301/danny-phantom",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 12,
+      "ru": "Моя жизнь как робота-подростка",
+      "en": "My Life as a Teenage Robot",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/012_My_Life_as_a_Teenage_Robot.jpg",
+      "source": "https://www.tvmaze.com/shows/12450/my-life-as-a-teenage-robot",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 13,
+      "ru": "Аватар: Легенда об Аанге",
+      "en": "Avatar: The Last Airbender",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/013_Avatar_The_Last_Airbender.jpg",
+      "source": "https://www.tvmaze.com/shows/555/avatar-the-last-airbender",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 14,
+      "ru": "Легенда о Корре",
+      "en": "The Legend of Korra",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/014_The_Legend_of_Korra.jpg",
+      "source": "https://www.tvmaze.com/shows/178/the-legend-of-korra",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 15,
+      "ru": "Пингвины из Мадагаскара",
+      "en": "The Penguins of Madagascar",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/015_The_Penguins_of_Madagascar.jpg",
+      "source": "https://www.tvmaze.com/shows/4037/the-penguins-of-madagascar",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 16,
+      "ru": "Рога и копыта: Возвращение",
+      "en": "Back at the Barnyard",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/016_Back_at_the_Barnyard.jpg",
+      "source": "https://www.tvmaze.com/shows/19430/back-at-the-barnyard",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 17,
+      "ru": "Турбо-Агент Дадли",
+      "en": "T.U.F.F. Puppy",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/017_T.U.F.F._Puppy.jpg",
+      "source": "https://www.tvmaze.com/shows/16497/tuff-puppy",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 18,
+      "ru": "Фанбой и Чам Чам",
+      "en": "Fanboy & Chum Chum",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/018_Fanboy__Chum_Chum.jpg",
+      "source": "https://www.tvmaze.com/shows/5614/fanboy-chum-chum",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 19,
+      "ru": "Планета Шина",
+      "en": "Planet Sheen",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/019_Planet_Sheen.jpg",
+      "source": "https://www.tvmaze.com/shows/18511/planet-sheen",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 20,
+      "ru": "Эль Тигре: Приключения Мэнни Риверы",
+      "en": "El Tigre: The Adventures of Manny Rivera",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/020_El_Tigre_The_Adventures_of_Manny_Rivera.jpg",
+      "source": "https://www.tvmaze.com/shows/12455/el-tigre-the-adventures-of-manny-rivera",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 21,
+      "ru": "Кошачьи царапки",
+      "en": "Catscratch",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/021_Catscratch.jpg",
+      "source": "https://www.tvmaze.com/shows/39434/catscratch",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 22,
+      "ru": "Меловая зона",
+      "en": "ChalkZone",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/022_ChalkZone.jpg",
+      "source": "https://www.tvmaze.com/shows/18167/chalkzone",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 23,
+      "ru": "Захватчик Зим",
+      "en": "Invader ZIM",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/023_Invader_ZIM.jpg",
+      "source": "https://www.tvmaze.com/shows/409/invader-zim",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 24,
+      "ru": "Новая жизнь Рокко",
+      "en": "Rocko's Modern Life",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/024_Rockos_Modern_Life.jpg",
+      "source": "https://www.tvmaze.com/shows/6322/rockos-modern-life",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 25,
+      "ru": "Настоящие монстры",
+      "en": "Aaahh!!! Real Monsters",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/025_Aaahh_Real_Monsters.jpg",
+      "source": "https://www.tvmaze.com/shows/8571/aaahh-real-monsters",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 26,
+      "ru": "Черепашки-ниндзя",
+      "en": "Teenage Mutant Ninja Turtles",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/026_Teenage_Mutant_Ninja_Turtles.jpg",
+      "source": "https://www.tvmaze.com/shows/668/teenage-mutant-ninja-turtles",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 27,
+      "ru": "Кунг-фу Панда: Удивительные легенды",
+      "en": "Kung Fu Panda: Legends of Awesomeness",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/027_Kung_Fu_Panda_Legends_of_Awesomeness.jpg",
+      "source": "https://www.tvmaze.com/shows/4039/kung-fu-panda-legends-of-awesomeness",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 28,
+      "ru": "Робот и Монстр",
+      "en": "Robot and Monster",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/028_Robot_and_Monster.jpg",
+      "source": "https://www.tvmaze.com/shows/17998/robot-and-monster",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 29,
+      "ru": "Санджей и Крейг",
+      "en": "Sanjay and Craig",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/029_Sanjay_and_Craig.jpg",
+      "source": "https://www.tvmaze.com/shows/896/sanjay-and-craig",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 30,
+      "ru": "Хлебоутки",
+      "en": "Breadwinners",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/030_Breadwinners.jpg",
+      "source": "https://www.tvmaze.com/shows/6936/breadwinners",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 31,
+      "ru": "Харви Бикс",
+      "en": "Harvey Beaks",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/031_Harvey_Beaks.jpg",
+      "source": "https://www.tvmaze.com/shows/1729/harvey-beaks",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 32,
+      "ru": "Мой шумный дом",
+      "en": "The Loud House",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/032_The_Loud_House.jpg",
+      "source": "https://www.tvmaze.com/shows/6405/the-loud-house",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 33,
+      "ru": "Могучая Би!",
+      "en": "The Mighty B!",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/033_The_Mighty_B.jpg",
+      "source": "https://www.tvmaze.com/shows/14477/the-mighty-b",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 34,
+      "ru": "Так и волшебная сила Жужу",
+      "en": "Tak and the Power of Juju",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/034_Tak_and_the_Power_of_Juju.jpg",
+      "source": "https://www.tvmaze.com/shows/18001/tak-and-the-power-of-juju",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 35,
+      "ru": "Даша-путешественница",
+      "en": "Dora the Explorer",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/035_Dora_the_Explorer.jpg",
+      "source": "https://www.tvmaze.com/shows/6489/dora-the-explorer",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 36,
+      "ru": "Вперёд, Диего, вперёд!",
+      "en": "Go, Diego, Go!",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/036_Go_Diego_Go.jpg",
+      "source": "https://www.tvmaze.com/shows/12453/go-diego-go",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 37,
+      "ru": "Фантазёры",
+      "en": "The Backyardigans",
+      "group": "01_Nickelodeon",
+      "file": "01_Nickelodeon/037_The_Backyardigans.jpg",
+      "source": "https://www.tvmaze.com/shows/15485/the-backyardigans",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 38,
+      "ru": "Финес и Ферб",
+      "en": "Phineas and Ferb",
+      "group": "02_Disney",
+      "file": "02_Disney/038_Phineas_and_Ferb.jpg",
+      "source": "https://www.tvmaze.com/shows/672/phineas-and-ferb",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 39,
+      "ru": "Гравити Фолз",
+      "en": "Gravity Falls",
+      "group": "02_Disney",
+      "file": "02_Disney/039_Gravity_Falls.jpg",
+      "source": "https://www.tvmaze.com/shows/396/gravity-falls",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 40,
+      "ru": "Ким Пять-с-плюсом",
+      "en": "Kim Possible",
+      "group": "02_Disney",
+      "file": "02_Disney/040_Kim_Possible.jpg",
+      "source": "https://www.tvmaze.com/shows/2557/kim-possible",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 41,
+      "ru": "Американский дракон: Джейк Лонг",
+      "en": "American Dragon: Jake Long",
+      "group": "02_Disney",
+      "file": "02_Disney/041_American_Dragon_Jake_Long.jpg",
+      "source": "https://www.tvmaze.com/shows/10007/american-dragon-jake-long",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 42,
+      "ru": "Чип и Дейл спешат на помощь",
+      "en": "Chip 'n Dale Rescue Rangers",
+      "group": "02_Disney",
+      "file": "02_Disney/042_Chip_n_Dale_Rescue_Rangers.jpg",
+      "source": "https://www.tvmaze.com/shows/5308/chip-n-dale-rescue-rangers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 43,
+      "ru": "Утиные истории",
+      "en": "DuckTales",
+      "group": "02_Disney",
+      "file": "02_Disney/043_DuckTales.jpg",
+      "source": "https://www.tvmaze.com/shows/4295/ducktales",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 44,
+      "ru": "Чёрный Плащ",
+      "en": "Darkwing Duck",
+      "group": "02_Disney",
+      "file": "02_Disney/044_Darkwing_Duck.jpg",
+      "source": "https://www.tvmaze.com/shows/94625/darkwing-duck",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 45,
+      "ru": "Чудеса на виражах",
+      "en": "TaleSpin",
+      "group": "02_Disney",
+      "file": "02_Disney/045_TaleSpin.jpg",
+      "source": "https://www.tvmaze.com/shows/8520/talespin",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 46,
+      "ru": "Приключения мишек Гамми",
+      "en": "Adventures of the Gummi Bears",
+      "group": "02_Disney",
+      "file": "02_Disney/046_Adventures_of_the_Gummi_Bears.jpg",
+      "source": "https://www.tvmaze.com/shows/5314/disneys-adventures-of-the-gummi-bears",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 47,
+      "ru": "Гуфи и его команда",
+      "en": "Goof Troop",
+      "group": "02_Disney",
+      "file": "02_Disney/047_Goof_Troop.jpg",
+      "source": "https://www.tvmaze.com/shows/12958/goof-troop",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 48,
+      "ru": "Аладдин",
+      "en": "Aladdin",
+      "group": "02_Disney",
+      "file": "02_Disney/048_Aladdin.jpg",
+      "source": "https://www.tvmaze.com/shows/5307/aladdin",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 49,
+      "ru": "Тимон и Пумба",
+      "en": "Timon & Pumbaa",
+      "group": "02_Disney",
+      "file": "02_Disney/049_Timon__Pumbaa.jpg",
+      "source": "https://www.tvmaze.com/shows/8370/timon-pumbaa",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 50,
+      "ru": "Геркулес",
+      "en": "Hercules",
+      "group": "02_Disney",
+      "file": "02_Disney/050_Hercules.jpg",
+      "source": "https://www.tvmaze.com/shows/8605/disneys-hercules",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 51,
+      "ru": "Русалочка",
+      "en": "The Little Mermaid",
+      "group": "02_Disney",
+      "file": "02_Disney/051_The_Little_Mermaid.jpg",
+      "source": "https://www.tvmaze.com/shows/9804/the-little-mermaid",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 52,
+      "ru": "Легенда о Тарзане",
+      "en": "The Legend of Tarzan",
+      "group": "02_Disney",
+      "file": "02_Disney/052_The_Legend_of_Tarzan.jpg",
+      "source": "https://www.tvmaze.com/shows/9802/the-legend-of-tarzan",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 53,
+      "ru": "Переменка",
+      "en": "Recess",
+      "group": "02_Disney",
+      "file": "02_Disney/053_Recess.jpg",
+      "source": "https://www.tvmaze.com/shows/5935/recess",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 54,
+      "ru": "На выходные",
+      "en": "The Weekenders",
+      "group": "02_Disney",
+      "file": "02_Disney/054_The_Weekenders.jpg",
+      "source": "https://www.tvmaze.com/shows/6248/the-weekenders",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 55,
+      "ru": "Семья Праудов",
+      "en": "The Proud Family",
+      "group": "02_Disney",
+      "file": "02_Disney/055_The_Proud_Family.jpg",
+      "source": "https://www.tvmaze.com/shows/18458/the-proud-family",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 56,
+      "ru": "Дэйв-варвар",
+      "en": "Dave the Barbarian",
+      "group": "02_Disney",
+      "file": "02_Disney/056_Dave_the_Barbarian.jpg",
+      "source": "https://www.tvmaze.com/shows/14340/dave-the-barbarian",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 57,
+      "ru": "Брэнди и мистер Вискерс",
+      "en": "Brandy & Mr. Whiskers",
+      "group": "02_Disney",
+      "file": "02_Disney/057_Brandy__Mr._Whiskers.jpg",
+      "source": "https://www.tvmaze.com/shows/18002/brandy-mr-whiskers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 58,
+      "ru": "Мэгги",
+      "en": "The Buzz on Maggie",
+      "group": "02_Disney",
+      "file": "02_Disney/058_The_Buzz_on_Maggie.jpg",
+      "source": "https://www.tvmaze.com/shows/39510/the-buzz-on-maggie",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 59,
+      "ru": "На замену",
+      "en": "The Replacements",
+      "group": "02_Disney",
+      "file": "02_Disney/059_The_Replacements.jpg",
+      "source": "https://www.tvmaze.com/shows/18354/the-replacements",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 60,
+      "ru": "Мышиный дом",
+      "en": "House of Mouse",
+      "group": "02_Disney",
+      "file": "02_Disney/060_House_of_Mouse.jpg",
+      "source": "https://www.tvmaze.com/shows/15419/disneys-house-of-mouse",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 61,
+      "ru": "Клуб Микки Мауса",
+      "en": "Mickey Mouse Clubhouse",
+      "group": "02_Disney",
+      "file": "02_Disney/061_Mickey_Mouse_Clubhouse.jpg",
+      "source": "https://www.tvmaze.com/shows/710/mickey-mouse-clubhouse",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 62,
+      "ru": "Мои друзья Тигруля и Винни",
+      "en": "My Friends Tigger & Pooh",
+      "group": "02_Disney",
+      "file": "02_Disney/062_My_Friends_Tigger__Pooh.jpg",
+      "source": "https://www.tvmaze.com/shows/14576/my-friends-tigger-pooh",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 63,
+      "ru": "Джейк и пираты Нетландии",
+      "en": "Jake and the Never Land Pirates",
+      "group": "02_Disney",
+      "file": "02_Disney/063_Jake_and_the_Never_Land_Pirates.jpg",
+      "source": "https://www.tvmaze.com/shows/3916/jake-and-the-never-land-pirates",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 64,
+      "ru": "Спецагент Осо",
+      "en": "Special Agent Oso",
+      "group": "02_Disney",
+      "file": "02_Disney/064_Special_Agent_Oso.jpg",
+      "source": "https://www.tvmaze.com/shows/12439/special-agent-oso",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 65,
+      "ru": "Рыбология",
+      "en": "Fish Hooks",
+      "group": "02_Disney",
+      "file": "02_Disney/065_Fish_Hooks.jpg",
+      "source": "https://www.tvmaze.com/shows/17844/fish-hooks",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 66,
+      "ru": "Сорвиголова Кик Бутовски",
+      "en": "Kick Buttowski: Suburban Daredevil",
+      "group": "02_Disney",
+      "file": "02_Disney/066_Kick_Buttowski_Suburban_Daredevil.jpg",
+      "source": "https://www.tvmaze.com/shows/18765/kick-buttowski-suburban-daredevil",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 67,
+      "ru": "Рэнди Каннингем: Ниндзя девятиклассник",
+      "en": "Randy Cunningham: 9th Grade Ninja",
+      "group": "02_Disney",
+      "file": "02_Disney/067_Randy_Cunningham_9th_Grade_Ninja.jpg",
+      "source": "https://www.tvmaze.com/shows/8646/randy-cunningham-9th-grade-ninja",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 68,
+      "ru": "С приветом по планетам",
+      "en": "Wander Over Yonder",
+      "group": "02_Disney",
+      "file": "02_Disney/068_Wander_Over_Yonder.jpg",
+      "source": "https://www.tvmaze.com/shows/1616/wander-over-yonder",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 69,
+      "ru": "Звёздная принцесса и силы зла",
+      "en": "Star vs. the Forces of Evil",
+      "group": "02_Disney",
+      "file": "02_Disney/069_Star_vs._the_Forces_of_Evil.jpg",
+      "source": "https://www.tvmaze.com/shows/1551/star-vs-the-forces-of-evil",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 70,
+      "ru": "София Прекрасная",
+      "en": "Sofia the First",
+      "group": "02_Disney",
+      "file": "02_Disney/070_Sofia_the_First.jpg",
+      "source": "https://www.tvmaze.com/shows/707/sofia-the-first",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 71,
+      "ru": "Доктор Плюшева",
+      "en": "Doc McStuffins",
+      "group": "02_Disney",
+      "file": "02_Disney/071_Doc_McStuffins.jpg",
+      "source": "https://www.tvmaze.com/shows/5347/doc-mcstuffins",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 72,
+      "ru": "Гаргульи",
+      "en": "Gargoyles",
+      "group": "02_Disney",
+      "file": "02_Disney/072_Gargoyles.jpg",
+      "source": "https://www.tvmaze.com/shows/1898/gargoyles",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 73,
+      "ru": "Пеппер Энн",
+      "en": "Pepper Ann",
+      "group": "02_Disney",
+      "file": "02_Disney/073_Pepper_Ann.jpg",
+      "source": "https://www.tvmaze.com/shows/17997/pepper-ann",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 74,
+      "ru": "Ллойд в космосе",
+      "en": "Lloyd in Space",
+      "group": "02_Disney",
+      "file": "02_Disney/074_Lloyd_in_Space.jpg",
+      "source": "https://www.tvmaze.com/shows/17995/lloyd-in-space",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 75,
+      "ru": "Том и Джерри",
+      "en": "Tom and Jerry",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/075_Tom_and_Jerry.jpg",
+      "source": "https://www.tvmaze.com/shows/72278/tom-and-jerry",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 76,
+      "ru": "Том и Джерри: Сказки",
+      "en": "Tom and Jerry Tales",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/076_Tom_and_Jerry_Tales.jpg",
+      "source": "https://www.tvmaze.com/shows/7358/tom-and-jerry-tales",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 77,
+      "ru": "Что новенького, Скуби-Ду?",
+      "en": "What's New Scooby-Doo?",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/077_Whats_New_Scooby-Doo.jpg",
+      "source": "https://www.tvmaze.com/shows/7593/whats-new-scooby-doo",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 78,
+      "ru": "Скуби-Ду! Мистическая корпорация",
+      "en": "Scooby-Doo! Mystery Incorporated",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/078_Scooby-Doo_Mystery_Incorporated.jpg",
+      "source": "https://www.tvmaze.com/shows/2711/scooby-doo-mystery-incorporated",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 79,
+      "ru": "Шоу Луни Тюнз",
+      "en": "The Looney Tunes Show",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/079_The_Looney_Tunes_Show.jpg",
+      "source": "https://www.tvmaze.com/shows/9733/the-looney-tunes-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 80,
+      "ru": "Малыши Луни Тюнз",
+      "en": "Baby Looney Tunes",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/080_Baby_Looney_Tunes.jpg",
+      "source": "https://www.tvmaze.com/shows/18495/baby-looney-tunes",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 81,
+      "ru": "Дак Доджерс",
+      "en": "Duck Dodgers",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/081_Duck_Dodgers.jpg",
+      "source": "https://www.tvmaze.com/shows/19176/duck-dodgers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 82,
+      "ru": "Сильвестр и Твити: Загадочные истории",
+      "en": "The Sylvester & Tweety Mysteries",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/082_The_Sylvester__Tweety_Mysteries.jpg",
+      "source": "https://www.tvmaze.com/shows/15922/the-sylvester-tweety-mysteries",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 83,
+      "ru": "Флинтстоуны",
+      "en": "The Flintstones",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/083_The_Flintstones.jpg",
+      "source": "https://www.tvmaze.com/shows/2143/the-flintstones",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 84,
+      "ru": "Джетсоны",
+      "en": "The Jetsons",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/084_The_Jetsons.jpg",
+      "source": "https://www.tvmaze.com/shows/2145/the-jetsons",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 85,
+      "ru": "Лаборатория Декстера",
+      "en": "Dexter's Laboratory",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/085_Dexters_Laboratory.jpg",
+      "source": "https://www.tvmaze.com/shows/1953/dexters-laboratory",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 86,
+      "ru": "Суперкрошки",
+      "en": "The Powerpuff Girls",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/086_The_Powerpuff_Girls.jpg",
+      "source": "https://www.tvmaze.com/shows/1955/the-powerpuff-girls",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 87,
+      "ru": "Джонни Браво",
+      "en": "Johnny Bravo",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/087_Johnny_Bravo.jpg",
+      "source": "https://www.tvmaze.com/shows/3932/johnny-bravo",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 88,
+      "ru": "Эд, Эдд и Эдди",
+      "en": "Ed, Edd n Eddy",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/088_Ed_Edd_n_Eddy.jpg",
+      "source": "https://www.tvmaze.com/shows/6428/ed-edd-n-eddy",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 89,
+      "ru": "Кураж — трусливый пёс",
+      "en": "Courage the Cowardly Dog",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/089_Courage_the_Cowardly_Dog.jpg",
+      "source": "https://www.tvmaze.com/shows/1956/courage-the-cowardly-dog",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 90,
+      "ru": "Корова и Цыплёнок",
+      "en": "Cow and Chicken",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/090_Cow_and_Chicken.jpg",
+      "source": "https://www.tvmaze.com/shows/12813/cow-and-chicken",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 91,
+      "ru": "Я — горностай",
+      "en": "I Am Weasel",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/091_I_Am_Weasel.jpg",
+      "source": "https://www.tvmaze.com/shows/10006/i-am-weasel",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 92,
+      "ru": "Самурай Джек",
+      "en": "Samurai Jack",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/092_Samurai_Jack.jpg",
+      "source": "https://www.tvmaze.com/shows/1603/samurai-jack",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 93,
+      "ru": "Фостер: Дом для друзей из мира фантазий",
+      "en": "Foster's Home for Imaginary Friends",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/093_Fosters_Home_for_Imaginary_Friends.jpg",
+      "source": "https://www.tvmaze.com/shows/7335/fosters-home-for-imaginary-friends",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 94,
+      "ru": "Приключения Билли и Мэнди",
+      "en": "The Grim Adventures of Billy & Mandy",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/094_The_Grim_Adventures_of_Billy__Mandy.jpg",
+      "source": "https://www.tvmaze.com/shows/7345/the-grim-adventures-of-billy-mandy",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 95,
+      "ru": "Кодовое имя: Соседи",
+      "en": "Codename: Kids Next Door",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/095_Codename_Kids_Next_Door.jpg",
+      "source": "https://www.tvmaze.com/shows/7302/codename-kids-next-door",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 96,
+      "ru": "Лагерь Лазло",
+      "en": "Camp Lazlo",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/096_Camp_Lazlo.jpg",
+      "source": "https://www.tvmaze.com/shows/10575/camp-lazlo",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 97,
+      "ru": "Чаудер",
+      "en": "Chowder",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/097_Chowder.jpg",
+      "source": "https://www.tvmaze.com/shows/978/chowder",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 98,
+      "ru": "Удивительные злоключения Флэпджека",
+      "en": "The Marvelous Misadventures of Flapjack",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/098_The_Marvelous_Misadventures_of_Flapjack.jpg",
+      "source": "https://www.tvmaze.com/shows/5472/the-marvelous-misadventures-of-flapjack",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 99,
+      "ru": "Бен 10",
+      "en": "Ben 10",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/099_Ben_10.jpg",
+      "source": "https://www.tvmaze.com/shows/951/ben-10",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 100,
+      "ru": "Бен 10: Инопланетная сила",
+      "en": "Ben 10: Alien Force",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/100_Ben_10_Alien_Force.jpg",
+      "source": "https://www.tvmaze.com/shows/1301/ben-10-alien-force",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 101,
+      "ru": "Бен 10: Сверхсила",
+      "en": "Ben 10: Ultimate Alien",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/101_Ben_10_Ultimate_Alien.jpg",
+      "source": "https://www.tvmaze.com/shows/1263/ben-10-ultimate-alien",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 102,
+      "ru": "Бен 10: Омниверс",
+      "en": "Ben 10: Omniverse",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/102_Ben_10_Omniverse.jpg",
+      "source": "https://www.tvmaze.com/shows/1264/ben-10-omniverse",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 103,
+      "ru": "Юные титаны",
+      "en": "Teen Titans",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/103_Teen_Titans.jpg",
+      "source": "https://www.tvmaze.com/shows/765/teen-titans",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 104,
+      "ru": "Юные титаны, вперёд!",
+      "en": "Teen Titans Go!",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/104_Teen_Titans_Go.jpg",
+      "source": "https://www.tvmaze.com/shows/706/teen-titans-go",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 105,
+      "ru": "Время приключений",
+      "en": "Adventure Time",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/105_Adventure_Time.jpg",
+      "source": "https://www.tvmaze.com/shows/290/adventure-time",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 106,
+      "ru": "Обычный мультик",
+      "en": "Regular Show",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/106_Regular_Show.jpg",
+      "source": "https://www.tvmaze.com/shows/868/regular-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 107,
+      "ru": "Удивительный мир Гамбола",
+      "en": "The Amazing World of Gumball",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/107_The_Amazing_World_of_Gumball.jpg",
+      "source": "https://www.tvmaze.com/shows/3134/the-amazing-world-of-gumball",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 108,
+      "ru": "Вся правда о медведях",
+      "en": "We Bare Bears",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/108_We_Bare_Bears.jpg",
+      "source": "https://www.tvmaze.com/shows/2612/we-bare-bears",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 109,
+      "ru": "Вселенная Стивена",
+      "en": "Steven Universe",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/109_Steven_Universe.jpg",
+      "source": "https://www.tvmaze.com/shows/1615/steven-universe",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 110,
+      "ru": "По ту сторону изгороди",
+      "en": "Over the Garden Wall",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/110_Over_the_Garden_Wall.jpg",
+      "source": "https://www.tvmaze.com/shows/1744/over-the-garden-wall",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 111,
+      "ru": "Дядя Деда",
+      "en": "Uncle Grandpa",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/111_Uncle_Grandpa.jpg",
+      "source": "https://www.tvmaze.com/shows/1617/uncle-grandpa",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 112,
+      "ru": "Кларенс",
+      "en": "Clarence",
+      "group": "03_Cartoon_Network_Boomerang",
+      "file": "03_Cartoon_Network_Boomerang/112_Clarence.jpg",
+      "source": "https://www.tvmaze.com/shows/5617/clarence",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 113,
+      "ru": "Чародейки",
+      "en": "W.I.T.C.H.",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/113_W.I.T.C.H..jpg",
+      "source": "https://www.tvmaze.com/shows/6570/witch",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 114,
+      "ru": "Тотали Спайс!",
+      "en": "Totally Spies!",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/114_Totally_Spies.jpg",
+      "source": "https://www.tvmaze.com/shows/6459/totally-spies",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 115,
+      "ru": "Мартин Мистери",
+      "en": "Martin Mystery",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/115_Martin_Mystery.jpg",
+      "source": "https://www.tvmaze.com/shows/16444/martin-mystery",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 116,
+      "ru": "Клуб охотников на монстров",
+      "en": "Monster Buster Club",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/116_Monster_Buster_Club.jpg",
+      "source": "https://www.tvmaze.com/shows/12219/monster-buster-club",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 117,
+      "ru": "Галактический футбол",
+      "en": "Galactik Football",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/117_Galactik_Football.jpg",
+      "source": "https://www.tvmaze.com/shows/4093/galactik-football",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 118,
+      "ru": "Обан: Звёздные гонки",
+      "en": "Oban Star-Racers",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/118_Oban_Star-Racers.jpg",
+      "source": "https://www.tvmaze.com/shows/4094/oban-star-racers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 119,
+      "ru": "Супер-робот обезьянья команда",
+      "en": "Super Robot Monkey Team Hyperforce Go!",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/119_Super_Robot_Monkey_Team_Hyperforce_Go.jpg",
+      "source": "https://www.tvmaze.com/shows/19439/super-robot-monkey-team-hyperforce-go",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 120,
+      "ru": "Инь! Ян! Йо!",
+      "en": "Yin Yang Yo!",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/120_Yin_Yang_Yo.jpg",
+      "source": "https://www.tvmaze.com/shows/17759/yin-yang-yo",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 121,
+      "ru": "Пукка",
+      "en": "Pucca",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/121_Pucca.jpg",
+      "source": "https://www.tvmaze.com/shows/19174/pucca",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 122,
+      "ru": "Школа сюрикенов",
+      "en": "Shuriken School",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/122_Shuriken_School.jpg",
+      "source": "https://www.tvmaze.com/shows/43354/shuriken-school",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 123,
+      "ru": "Получи Эда",
+      "en": "Get Ed",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/123_Get_Ed.jpg",
+      "source": "https://www.tvmaze.com/shows/45905/get-ed",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 124,
+      "ru": "Команда Галактика",
+      "en": "Team Galaxy",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/124_Team_Galaxy.jpg",
+      "source": "https://www.tvmaze.com/shows/26998/team-galaxy",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 125,
+      "ru": "A.T.O.M.: Альфа-команда",
+      "en": "A.T.O.M.",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/125_A.T.O.M..jpg",
+      "source": "https://www.tvmaze.com/shows/15720/atom-alpha-teens-on-machines",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 126,
+      "ru": "Секретное шоу",
+      "en": "The Secret Show",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/126_The_Secret_Show.jpg",
+      "source": "https://www.tvmaze.com/shows/27770/the-secret-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 127,
+      "ru": "Кид vs Кэт",
+      "en": "Kid vs. Kat",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/127_Kid_vs._Kat.jpg",
+      "source": "https://www.tvmaze.com/shows/6564/kid-vs-kat",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 128,
+      "ru": "Джимми Кул",
+      "en": "Jimmy Two-Shoes",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/128_Jimmy_Two-Shoes.jpg",
+      "source": "https://www.tvmaze.com/shows/27987/jimmy-two-shoes",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 129,
+      "ru": "Детки из класса 402",
+      "en": "The Kids from Room 402",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/129_The_Kids_from_Room_402.jpg",
+      "source": "https://www.tvmaze.com/shows/8915/the-kids-from-room-402",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 130,
+      "ru": "Жизнь с Луи",
+      "en": "Life with Louie",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/130_Life_with_Louie.jpg",
+      "source": "https://www.tvmaze.com/shows/7442/life-with-louie",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 131,
+      "ru": "Что с Энди?",
+      "en": "What's with Andy?",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/131_Whats_with_Andy.jpg",
+      "source": "https://www.tvmaze.com/shows/2568/whats-with-andy",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 132,
+      "ru": "Новое шоу дятла Вуди",
+      "en": "The New Woody Woodpecker Show",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/132_The_New_Woody_Woodpecker_Show.jpg",
+      "source": "https://www.tvmaze.com/shows/6883/the-new-woody-woodpecker-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 133,
+      "ru": "Инспектор Гаджет",
+      "en": "Inspector Gadget",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/133_Inspector_Gadget.jpg",
+      "source": "https://www.tvmaze.com/shows/4579/inspector-gadget",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 134,
+      "ru": "Человек-паук",
+      "en": "Spider-Man: The Animated Series",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/134_Spider-Man_The_Animated_Series.jpg",
+      "source": "https://www.tvmaze.com/shows/1611/spider-man",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 135,
+      "ru": "Новые приключения Человека-паука",
+      "en": "The Spectacular Spider-Man",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/135_The_Spectacular_Spider-Man.jpg",
+      "source": "https://www.tvmaze.com/shows/4490/the-spectacular-spider-man",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 136,
+      "ru": "Великий Человек-паук",
+      "en": "Ultimate Spider-Man",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/136_Ultimate_Spider-Man.jpg",
+      "source": "https://www.tvmaze.com/shows/3114/marvels-ultimate-spider-man",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 137,
+      "ru": "Люди Икс",
+      "en": "X-Men: The Animated Series",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/137_X-Men_The_Animated_Series.jpg",
+      "source": "https://www.tvmaze.com/shows/472/x-men",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 138,
+      "ru": "Люди Икс: Эволюция",
+      "en": "X-Men: Evolution",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/138_X-Men_Evolution.jpg",
+      "source": "https://www.tvmaze.com/shows/1612/x-men-evolution",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 139,
+      "ru": "Черепашки-ниндзя",
+      "en": "Teenage Mutant Ninja Turtles",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/139_Teenage_Mutant_Ninja_Turtles.jpg",
+      "source": "https://www.tvmaze.com/shows/736/teenage-mutant-ninja-turtles",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 140,
+      "ru": "Соник Икс",
+      "en": "Sonic X",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/140_Sonic_X.jpg",
+      "source": "https://www.tvmaze.com/shows/7646/sonic-x",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 141,
+      "ru": "Соник Андеграунд",
+      "en": "Sonic Underground",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/141_Sonic_Underground.jpg",
+      "source": "https://www.tvmaze.com/shows/18666/sonic-underground",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 142,
+      "ru": "Дигимон: Цифровые монстры",
+      "en": "Digimon: Digital Monsters",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/142_Digimon_Digital_Monsters.jpg",
+      "source": "https://www.tvmaze.com/shows/1517/digimon-digital-monsters",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 143,
+      "ru": "Покемон",
+      "en": "Pokemon",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/143_Pokemon.png",
+      "source": "https://in.portal-pokemon.com/tv-film/1/",
+      "sk": "Ресми сайт",
+      "kind": "series"
+    },
+    {
+      "n": 144,
+      "ru": "Бакуган: Отчаянные бойцы",
+      "en": "Bakugan Battle Brawlers",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/144_Bakugan_Battle_Brawlers.jpg",
+      "source": "https://www.tvmaze.com/shows/26848/bakugan-battle-brawlers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 145,
+      "ru": "Бейблэйд",
+      "en": "Beyblade",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/145_Beyblade.jpg",
+      "source": "https://www.imdb.com/title/tt0328733/episodes/?season=2",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 146,
+      "ru": "Югио: Дуэльные монстры",
+      "en": "Yu-Gi-Oh! Duel Monsters",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/146_Yu-Gi-Oh_Duel_Monsters.jpg",
+      "source": "https://www.tvmaze.com/shows/4099/yu-gi-oh-duel-monsters",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 147,
+      "ru": "Король шаманов",
+      "en": "Shaman King",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/147_Shaman_King.jpg",
+      "source": "https://www.themoviedb.org/tv/40143-shaman-king/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 148,
+      "ru": "Наруто",
+      "en": "Naruto",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/148_Naruto.jpg",
+      "source": "https://www.tvmaze.com/shows/495/naruto",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 149,
+      "ru": "Приключения Джеки Чана",
+      "en": "Jackie Chan Adventures",
+      "group": "04_Jetix_FoxKids_Action",
+      "file": "04_Jetix_FoxKids_Action/149_Jackie_Chan_Adventures.jpg",
+      "source": "https://www.tvmaze.com/shows/5709/jackie-chan-adventures",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 150,
+      "ru": "Клуб Винкс: Школа волшебниц",
+      "en": "Winx Club",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/150_Winx_Club.jpg",
+      "source": "https://www.tvmaze.com/shows/5883/winx-club",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 151,
+      "ru": "Код Лиоко",
+      "en": "Code Lyoko",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/151_Code_Lyoko.jpg",
+      "source": "https://www.tvmaze.com/shows/10290/code-lyoko",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 152,
+      "ru": "Барашек Шон",
+      "en": "Shaun the Sheep",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/152_Shaun_the_Sheep.jpg",
+      "source": "https://www.tvmaze.com/shows/704/shaun-the-sheep",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 153,
+      "ru": "Огги и тараканы",
+      "en": "Oggy and the Cockroaches",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/153_Oggy_and_the_Cockroaches.jpg",
+      "source": "https://www.tvmaze.com/shows/2560/oggy-et-les-cafards",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 154,
+      "ru": "Зиг и Шарко",
+      "en": "Zig & Sharko",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/154_Zig__Sharko.jpg",
+      "source": "https://www.tvmaze.com/shows/45968/zig-et-sharko",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 155,
+      "ru": "Шоу Гарфилда",
+      "en": "The Garfield Show",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/155_The_Garfield_Show.jpg",
+      "source": "https://www.tvmaze.com/shows/16574/the-garfield-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 156,
+      "ru": "Гарфилд и его друзья",
+      "en": "Garfield and Friends",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/156_Garfield_and_Friends.jpg",
+      "source": "https://www.tvmaze.com/shows/6452/garfield-and-friends",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 157,
+      "ru": "Дятел Вуди",
+      "en": "Woody Woodpecker",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/157_Woody_Woodpecker.jpg",
+      "source": "https://www.tvmaze.com/shows/6882/the-woody-woodpecker-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 158,
+      "ru": "Шоу Розовой пантеры",
+      "en": "The Pink Panther Show",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/158_The_Pink_Panther_Show.jpg",
+      "source": "https://www.tvmaze.com/shows/6966/the-pink-panther-show",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 159,
+      "ru": "Пингу",
+      "en": "Pingu",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/159_Pingu.jpg",
+      "source": "https://www.tvmaze.com/shows/6751/pingu",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 160,
+      "ru": "Бернард",
+      "en": "Bernard",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/160_Bernard.jpg",
+      "source": "https://www.tvmaze.com/shows/20714/bernard",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 161,
+      "ru": "Личинки",
+      "en": "Larva",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/161_Larva.jpg",
+      "source": "https://www.tvmaze.com/shows/22983/larva",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 162,
+      "ru": "Оазис Оскара",
+      "en": "Oscar's Oasis",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/162_Oscars_Oasis.jpg",
+      "source": "https://www.tvmaze.com/shows/35227/oscars-oasis",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 163,
+      "ru": "Анджело рулит",
+      "en": "Angelo Rules",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/163_Angelo_Rules.jpg",
+      "source": "https://www.tvmaze.com/shows/17754/angelo-rules",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 164,
+      "ru": "Мой маленький пони: Дружба — это чудо",
+      "en": "My Little Pony: Friendship is Magic",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/164_My_Little_Pony_Friendship_is_Magic.jpg",
+      "source": "https://www.tvmaze.com/shows/2818/my-little-pony-friendship-is-magic",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 165,
+      "ru": "Маленький зоомагазин",
+      "en": "Littlest Pet Shop",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/165_Littlest_Pet_Shop.jpg",
+      "source": "https://www.tvmaze.com/shows/7797/littlest-pet-shop",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 166,
+      "ru": "Друзья ангелов",
+      "en": "Angel's Friends",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/166_Angels_Friends.jpg",
+      "source": "https://www.tvmaze.com/shows/20474/angels-friends",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 167,
+      "ru": "Хантик: Искатели секретов",
+      "en": "Huntik: Secrets & Seekers",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/167_Huntik_Secrets__Seekers.jpg",
+      "source": "https://www.tvmaze.com/shows/18519/huntik-secrets-seekers",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 168,
+      "ru": "Слагтерра",
+      "en": "Slugterra",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/168_Slugterra.jpg",
+      "source": "https://www.tvmaze.com/shows/19735/slugterra",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 169,
+      "ru": "Ниндзяго: Мастера кружитцу",
+      "en": "Ninjago: Masters of Spinjitzu",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/169_Ninjago_Masters_of_Spinjitzu.jpg",
+      "source": "https://www.tvmaze.com/shows/18374/lego-ninjago-masters-of-spinjitzu",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 170,
+      "ru": "Трансформеры: Прайм",
+      "en": "Transformers: Prime",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/170_Transformers_Prime.jpg",
+      "source": "https://www.tvmaze.com/shows/5823/transformers-prime",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 171,
+      "ru": "Трансформеры: Анимация",
+      "en": "Transformers: Animated",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/171_Transformers_Animated.jpg",
+      "source": "https://www.tvmaze.com/shows/16839/transformers-animated",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 172,
+      "ru": "Железный человек: Приключения в броне",
+      "en": "Iron Man: Armored Adventures",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/172_Iron_Man_Armored_Adventures.jpg",
+      "source": "https://www.tvmaze.com/shows/6893/iron-man-armored-adventures",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 173,
+      "ru": "Мстители: Величайшие герои Земли",
+      "en": "The Avengers: Earth's Mightiest Heroes",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/173_The_Avengers_Earths_Mightiest_Heroes.jpg",
+      "source": "https://www.tvmaze.com/shows/671/the-avengers-earths-mightiest-heroes",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 174,
+      "ru": "Смешарики",
+      "en": "Smeshariki",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/174_Smeshariki.jpg",
+      "source": "https://www.tvmaze.com/shows/69972/smesariki",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 175,
+      "ru": "Фиксики",
+      "en": "The Fixies",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/175_The_Fixies.jpg",
+      "source": "https://www.justwatch.com/ru/%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB/fiksiki",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 176,
+      "ru": "Маша и Медведь",
+      "en": "Masha and the Bear",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/176_Masha_and_the_Bear.jpg",
+      "source": "https://www.tvmaze.com/shows/11469/masa-i-medved",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 177,
+      "ru": "Лунтик и его друзья",
+      "en": "Luntik",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/177_Luntik.jpg",
+      "source": "https://www.justwatch.com/ru/%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB/luntik",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 178,
+      "ru": "Ну, погоди!",
+      "en": "Nu, Pogodi!",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/178_Nu_Pogodi.jpg",
+      "source": "https://www.tvmaze.com/shows/6591/nu-pogodi",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 179,
+      "ru": "Простоквашино",
+      "en": "Prostokvashino",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/179_Prostokvashino.jpg",
+      "source": "https://back-in-ussr.com/2015/04/istorii-sozdaniya-populyarnyh-sovetskih-multikov.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 180,
+      "ru": "Приключения кота Леопольда",
+      "en": "The Adventures of Leopold the Cat",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/180_The_Adventures_of_Leopold_the_Cat.jpg",
+      "source": "https://smotreshka.tv/archive/5b225dbb21887f1dc87a6547",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 181,
+      "ru": "Барбоскины",
+      "en": "Barboskiny",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/181_Barboskiny.jpg",
+      "source": "https://www.kino-teatr.ru/mult/movie/ros/100804/annot/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "series"
+    },
+    {
+      "n": 182,
+      "ru": "Волшебный школьный автобус",
+      "en": "The Magic School Bus",
+      "group": "05_Other_Childhood_TV",
+      "file": "05_Other_Childhood_TV/182_The_Magic_School_Bus.jpg",
+      "source": "https://www.tvmaze.com/shows/18504/the-magic-school-bus",
+      "sk": "TVmaze: каталог постеров",
+      "kind": "series"
+    },
+    {
+      "n": 183,
+      "ru": "История игрушек",
+      "en": "Toy Story",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/183_Toy_Story.jpg",
+      "source": "https://movies.disney.com/toy-story",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 184,
+      "ru": "История игрушек 2",
+      "en": "Toy Story 2",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/184_Toy_Story_2.jpg",
+      "source": "https://movies.disney.com/toy-story-2",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 185,
+      "ru": "История игрушек: Большой побег",
+      "en": "Toy Story 3",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/185_Toy_Story_3.jpg",
+      "source": "https://movies.disney.com/toy-story-3",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 186,
+      "ru": "Приключения Флика",
+      "en": "A Bug's Life",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/186_A_Bugs_Life.jpg",
+      "source": "https://movies.disney.com/a-bugs-life",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 187,
+      "ru": "Корпорация монстров",
+      "en": "Monsters, Inc.",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/187_Monsters_Inc..jpg",
+      "source": "https://movies.disney.com/monsters-inc",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 188,
+      "ru": "Университет монстров",
+      "en": "Monsters University",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/188_Monsters_University.jpg",
+      "source": "https://movies.disney.com/monsters-university",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 189,
+      "ru": "Суперсемейка",
+      "en": "The Incredibles",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/189_The_Incredibles.jpg",
+      "source": "https://movies.disney.com/the-incredibles",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 190,
+      "ru": "Тачки",
+      "en": "Cars",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/190_Cars.jpg",
+      "source": "https://movies.disney.com/cars",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 191,
+      "ru": "Тачки 2",
+      "en": "Cars 2",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/191_Cars_2.jpg",
+      "source": "https://movies.disney.com/cars-2",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 192,
+      "ru": "Рататуй",
+      "en": "Ratatouille",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/192_Ratatouille.jpg",
+      "source": "https://movies.disney.com/ratatouille",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 193,
+      "ru": "ВАЛЛ-И",
+      "en": "WALL-E",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/193_WALL-E.jpg",
+      "source": "https://movies.disney.com/wall-e",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 194,
+      "ru": "Вверх",
+      "en": "Up",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/194_Up.jpg",
+      "source": "https://movies.disney.com/up",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 195,
+      "ru": "Храбрая сердцем",
+      "en": "Brave",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/195_Brave.jpg",
+      "source": "https://movies.disney.com/brave",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 196,
+      "ru": "Головоломка",
+      "en": "Inside Out",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/196_Inside_Out.jpg",
+      "source": "https://movies.disney.com/inside-out",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 197,
+      "ru": "Хороший динозавр",
+      "en": "The Good Dinosaur",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/197_The_Good_Dinosaur.jpg",
+      "source": "https://movies.disney.com/the-good-dinosaur",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 198,
+      "ru": "В поисках Дори",
+      "en": "Finding Dory",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/198_Finding_Dory.jpg",
+      "source": "https://movies.disney.com/finding-dory",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 199,
+      "ru": "Король Лев",
+      "en": "The Lion King",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/199_The_Lion_King.jpg",
+      "source": "https://movies.disney.com/the-lion-king-1994",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 200,
+      "ru": "Король Лев 2: Гордость Симбы",
+      "en": "The Lion King 2: Simba's Pride",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/200_The_Lion_King_2_Simbas_Pride.jpg",
+      "source": "https://www.themoviedb.org/movie/9732-the-lion-king-ii-simba-s-pride/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 201,
+      "ru": "Аладдин",
+      "en": "Aladdin",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/201_Aladdin.jpg",
+      "source": "https://www.impawards.com/1992/aladdin_ver3_xxlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 202,
+      "ru": "Геркулес",
+      "en": "Hercules",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/202_Hercules.jpg",
+      "source": "https://www.filmposter-archiv.de/filmplakat.php?id=25376",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 203,
+      "ru": "Мулан",
+      "en": "Mulan",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/203_Mulan.jpg",
+      "source": "https://movies.disney.com/mulan",
+      "sk": "Ресми сайт",
+      "kind": "movie"
+    },
+    {
+      "n": 204,
+      "ru": "Тарзан",
+      "en": "Tarzan",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/204_Tarzan.jpg",
+      "source": "https://movies.disney.com/tarzan",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 205,
+      "ru": "Покахонтас",
+      "en": "Pocahontas",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/205_Pocahontas.jpg",
+      "source": "https://movies.disney.com/pocahontas",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 206,
+      "ru": "Горбун из Нотр-Дама",
+      "en": "The Hunchback of Notre Dame",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/206_The_Hunchback_of_Notre_Dame.jpg",
+      "source": "https://movies.disney.com/the-hunchback-of-notre-dame",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 207,
+      "ru": "Русалочка",
+      "en": "The Little Mermaid",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/207_The_Little_Mermaid.jpg",
+      "source": "https://movies.disney.com/the-little-mermaid-1989",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 208,
+      "ru": "Красавица и Чудовище",
+      "en": "Beauty and the Beast",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/208_Beauty_and_the_Beast.jpg",
+      "source": "https://movies.disney.com/beauty-and-the-beast-1991",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 209,
+      "ru": "Атлантида: Затерянный мир",
+      "en": "Atlantis: The Lost Empire",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/209_Atlantis_The_Lost_Empire.jpg",
+      "source": "https://movies.disney.com/atlantis-the-lost-empire",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 210,
+      "ru": "Планета сокровищ",
+      "en": "Treasure Planet",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/210_Treasure_Planet.jpg",
+      "source": "https://movies.disney.com/treasure-planet",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 211,
+      "ru": "Братец медвежонок",
+      "en": "Brother Bear",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/211_Brother_Bear.jpg",
+      "source": "https://movies.disney.com/brother-bear",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 212,
+      "ru": "Цыплёнок Цыпа",
+      "en": "Chicken Little",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/212_Chicken_Little.jpg",
+      "source": "https://movies.disney.com/chicken-little",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 213,
+      "ru": "В гости к Робинсонам",
+      "en": "Meet the Robinsons",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/213_Meet_the_Robinsons.jpg",
+      "source": "https://movies.disney.com/meet-the-robinsons",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 214,
+      "ru": "Вольт",
+      "en": "Bolt",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/214_Bolt.jpg",
+      "source": "https://movies.disney.com/bolt",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 215,
+      "ru": "Рапунцель: Запутанная история",
+      "en": "Tangled",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/215_Tangled.jpg",
+      "source": "https://movies.disney.com/tangled",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 216,
+      "ru": "Ральф",
+      "en": "Wreck-It Ralph",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/216_Wreck-It_Ralph.jpg",
+      "source": "https://movies.disney.com/wreck-it-ralph",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 217,
+      "ru": "Холодное сердце",
+      "en": "Frozen",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/217_Frozen.jpg",
+      "source": "https://movies.disney.com/frozen",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 218,
+      "ru": "Город героев",
+      "en": "Big Hero 6",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/218_Big_Hero_6.jpg",
+      "source": "https://movies.disney.com/big-hero-6",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 219,
+      "ru": "Зверополис",
+      "en": "Zootopia",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/219_Zootopia.jpg",
+      "source": "https://movies.disney.com/zootopia",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 220,
+      "ru": "Моана",
+      "en": "Moana",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/220_Moana.jpg",
+      "source": "https://movies.disney.com/moana",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 221,
+      "ru": "Динозавр",
+      "en": "Dinosaur",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/221_Dinosaur.jpg",
+      "source": "https://movies.disney.com/dinosaur",
+      "sk": "Ресми сайт",
+      "kind": "movie"
+    },
+    {
+      "n": 222,
+      "ru": "Оливер и компания",
+      "en": "Oliver & Company",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/222_Oliver__Company.jpg",
+      "source": "https://movies.disney.com/oliver-and-company",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 223,
+      "ru": "Коты-аристократы",
+      "en": "The Aristocats",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/223_The_Aristocats.jpg",
+      "source": "https://movies.disney.com/the-aristocats",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 224,
+      "ru": "Лис и пёс",
+      "en": "The Fox and the Hound",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/224_The_Fox_and_the_Hound.jpg",
+      "source": "https://movies.disney.com/the-fox-and-the-hound",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 225,
+      "ru": "Книга джунглей",
+      "en": "The Jungle Book",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/225_The_Jungle_Book.jpg",
+      "source": "https://movies.disney.com/the-jungle-book-1967",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 226,
+      "ru": "Робин Гуд",
+      "en": "Robin Hood",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/226_Robin_Hood.jpg",
+      "source": "https://www.imdb.com/title/tt0070608/mediaviewer/rm393516546/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 227,
+      "ru": "Каникулы Гуфи",
+      "en": "A Goofy Movie",
+      "group": "06_Disney_Pixar_Movies",
+      "file": "06_Disney_Pixar_Movies/227_A_Goofy_Movie.jpg",
+      "source": "https://movies.disney.com/a-goofy-movie",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 228,
+      "ru": "Мадагаскар",
+      "en": "Madagascar",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/228_Madagascar.jpg",
+      "source": "https://www.imdb.com/title/tt0351283/mediaviewer/rm3111000064",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 229,
+      "ru": "Мадагаскар 2",
+      "en": "Madagascar: Escape 2 Africa",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/229_Madagascar_Escape_2_Africa.jpg",
+      "source": "https://www.imdb.com/title/tt0479952/mediaviewer/rm1532256769/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 230,
+      "ru": "Мадагаскар 3",
+      "en": "Madagascar 3: Europe's Most Wanted",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/230_Madagascar_3_Europes_Most_Wanted.jpg",
+      "source": "https://www.imdb.com/list/ls085798518/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 231,
+      "ru": "Пингвины Мадагаскара",
+      "en": "Penguins of Madagascar",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/231_Penguins_of_Madagascar.jpg",
+      "source": "https://www.universalpicturesathome.com/movies/penguins-of-madagascar",
+      "sk": "Ресми сайт",
+      "kind": "movie"
+    },
+    {
+      "n": 232,
+      "ru": "Кунг-фу Панда",
+      "en": "Kung Fu Panda",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/232_Kung_Fu_Panda.jpg",
+      "source": "https://www.dreamworks.com/kung-fu-panda",
+      "sk": "Ресми сайт",
+      "kind": "movie"
+    },
+    {
+      "n": 233,
+      "ru": "Кунг-фу Панда 2",
+      "en": "Kung Fu Panda 2",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/233_Kung_Fu_Panda_2.jpg",
+      "source": "https://www.impawards.com/2011/kung_fu_panda_two_ver2_xxlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 234,
+      "ru": "Кунг-фу Панда 3",
+      "en": "Kung Fu Panda 3",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/234_Kung_Fu_Panda_3.jpg",
+      "source": "https://www.imdb.com/fr/title/tt2267968/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 235,
+      "ru": "Как приручить дракона",
+      "en": "How to Train Your Dragon",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/235_How_to_Train_Your_Dragon.jpg",
+      "source": "https://www.impawards.com/2010/how_to_train_your_dragon_ver8_xlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 236,
+      "ru": "Как приручить дракона 2",
+      "en": "How to Train Your Dragon 2",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/236_How_to_Train_Your_Dragon_2.jpg",
+      "source": "https://www.impawards.com/2014/how_to_train_your_dragon_two_ver8.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 237,
+      "ru": "Мегамозг",
+      "en": "Megamind",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/237_Megamind.jpg",
+      "source": "https://www.fandango.com/megamind-an-imax-3d-experience-134269/movie-photos-posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 238,
+      "ru": "Би Муви: Медовый заговор",
+      "en": "Bee Movie",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/238_Bee_Movie.jpg",
+      "source": "https://www.universalpicturesathome.com/movies/bee-movie",
+      "sk": "Ресми сайт",
+      "kind": "movie"
+    },
+    {
+      "n": 239,
+      "ru": "Лесная братва",
+      "en": "Over the Hedge",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/239_Over_the_Hedge.jpg",
+      "source": "https://www.imdb.com/title/tt0327084/mediaviewer/rm2913156865/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 240,
+      "ru": "Смывайся!",
+      "en": "Flushed Away",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/240_Flushed_Away.jpg",
+      "source": "https://www.impawards.com/2006/flushed_away_ver4_xxlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 241,
+      "ru": "Побег из курятника",
+      "en": "Chicken Run",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/241_Chicken_Run.jpg",
+      "source": "https://www.impawards.com/2000/chicken_run_ver3_xlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 242,
+      "ru": "Уоллес и Громит: Проклятие кролика-оборотня",
+      "en": "Wallace & Gromit: The Curse of the Were-Rabbit",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/242_Wallace__Gromit_The_Curse_of_the_Were-Rabbit.jpg",
+      "source": "https://www.themoviedb.org/movie/533-wallace-gromit-the-curse-of-the-were-rabbit/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 243,
+      "ru": "Дорога на Эльдорадо",
+      "en": "The Road to El Dorado",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/243_The_Road_to_El_Dorado.webp",
+      "source": "https://peliculas.lavanguardia.com/peliculas/la-ruta-hacia-el-dorado-10501",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 244,
+      "ru": "Принц Египта",
+      "en": "The Prince of Egypt",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/244_The_Prince_of_Egypt.jpg",
+      "source": "https://www.rottentomatoes.com/m/the_prince_of_egypt",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 245,
+      "ru": "Синдбад: Легенда семи морей",
+      "en": "Sinbad: Legend of the Seven Seas",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/245_Sinbad_Legend_of_the_Seven_Seas.jpg",
+      "source": "https://www.imdb.com/title/tt0165982/mediaviewer/rm3458439168/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 246,
+      "ru": "Монстры против пришельцев",
+      "en": "Monsters vs. Aliens",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/246_Monsters_vs._Aliens.jpg",
+      "source": "https://www.themoviedb.org/movie/15512-monsters-vs-aliens/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 247,
+      "ru": "Кот в сапогах",
+      "en": "Puss in Boots",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/247_Puss_in_Boots.jpg",
+      "source": "https://www.impawards.com/2011/puss_in_boots_ver3_xxlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 248,
+      "ru": "Хранители снов",
+      "en": "Rise of the Guardians",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/248_Rise_of_the_Guardians.jpg",
+      "source": "https://www.adorocinema.com/filmes/filme-189909/fotos/detalhe/?cmediafile=1000003897",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 249,
+      "ru": "Семейка Крудс",
+      "en": "The Croods",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/249_The_Croods.jpg",
+      "source": "https://behindzescenes.wordpress.com/2013/04/17/les-croods-un-film-danimation-cro-mignon/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 250,
+      "ru": "Турбо",
+      "en": "Turbo",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/250_Turbo.jpg",
+      "source": "https://www.impawards.com/2013/turbo_xlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 251,
+      "ru": "Приключения мистера Пибоди и Шермана",
+      "en": "Mr. Peabody & Sherman",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/251_Mr._Peabody__Sherman.jpg",
+      "source": "https://www.universalpicturesathome.com/movies/mr-peabody-sherman",
+      "sk": "Ресми сайт",
+      "kind": "movie"
+    },
+    {
+      "n": 252,
+      "ru": "Дом",
+      "en": "Home",
+      "group": "07_DreamWorks_Movies",
+      "file": "07_DreamWorks_Movies/252_Home.jpg",
+      "source": "https://www.themoviedb.org/movie/228161-home/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 253,
+      "ru": "Гадкий я",
+      "en": "Despicable Me",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/253_Despicable_Me.jpg",
+      "source": "https://castel.jp/item/112388/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 254,
+      "ru": "Гадкий я 2",
+      "en": "Despicable Me 2",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/254_Despicable_Me_2.jpg",
+      "source": "https://www.impawards.com/2013/despicable_me_two_ver4_xlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 255,
+      "ru": "Миньоны",
+      "en": "Minions",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/255_Minions.jpg",
+      "source": "https://www.movieinsider.com/posters/234466",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 256,
+      "ru": "Лоракс",
+      "en": "The Lorax",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/256_The_Lorax.jpg",
+      "source": "https://www.imdb.com/title/tt1482459/mediaviewer/rm4033420288/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 257,
+      "ru": "Хортон",
+      "en": "Horton Hears a Who!",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/257_Horton_Hears_a_Who.jpg",
+      "source": "https://www.impawards.com/2008/horton_hears_a_who_xxlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 258,
+      "ru": "Коралина в Стране Кошмаров",
+      "en": "Coraline",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/258_Coraline.jpg",
+      "source": "https://www.filmaffinity.com/es/film629275.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 259,
+      "ru": "Ранго",
+      "en": "Rango",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/259_Rango.jpg",
+      "source": "https://www.imdb.com/de/title/tt1192628/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 260,
+      "ru": "Делай ноги",
+      "en": "Happy Feet",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/260_Happy_Feet.jpg",
+      "source": "https://www.filmposter-archiv.de/filmplakat.php?id=15423",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 261,
+      "ru": "Полярный экспресс",
+      "en": "The Polar Express",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/261_The_Polar_Express.jpg",
+      "source": "https://www.impawards.com/2004/polar_express.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 262,
+      "ru": "Тайная жизнь домашних животных",
+      "en": "The Secret Life of Pets",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/262_The_Secret_Life_of_Pets.jpg",
+      "source": "https://www.impawards.com/2016/secret_life_of_pets_ver16_xlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 263,
+      "ru": "Ледниковый период",
+      "en": "Ice Age",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/263_Ice_Age.jpg",
+      "source": "https://movies.disney.com/ice-age",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 264,
+      "ru": "Ледниковый период 2: Глобальное потепление",
+      "en": "Ice Age: The Meltdown",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/264_Ice_Age_The_Meltdown.jpg",
+      "source": "https://movies.disney.com/ice-age-the-meltdown",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 265,
+      "ru": "Ледниковый период 3: Эра динозавров",
+      "en": "Ice Age: Dawn of the Dinosaurs",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/265_Ice_Age_Dawn_of_the_Dinosaurs.jpg",
+      "source": "https://movies.disney.com/ice-age-dawn-of-the-dinosaurs",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 266,
+      "ru": "Ледниковый период 4: Континентальный дрейф",
+      "en": "Ice Age: Continental Drift",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/266_Ice_Age_Continental_Drift.jpg",
+      "source": "https://movies.disney.com/ice-age-continental-drift",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 267,
+      "ru": "Рио",
+      "en": "Rio",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/267_Rio.jpg",
+      "source": "https://www.themoviedb.org/movie/46195-rio/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 268,
+      "ru": "Рио 2",
+      "en": "Rio 2",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/268_Rio_2.jpg",
+      "source": "https://www.themoviedb.org/movie/172385-rio-2/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 269,
+      "ru": "Анастасия",
+      "en": "Anastasia",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/269_Anastasia.jpg",
+      "source": "https://www.moviemeter.com/movies/animation/anastasia",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 270,
+      "ru": "Эпик",
+      "en": "Epic",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/270_Epic.jpg",
+      "source": "https://www.impawards.com/2013/epic_ver10_xlg.html",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 271,
+      "ru": "Монстры на каникулах",
+      "en": "Hotel Transylvania",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/271_Hotel_Transylvania.jpg",
+      "source": "https://www.sonypictures.com/movies/hoteltransylvania",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 272,
+      "ru": "Монстры на каникулах 2",
+      "en": "Hotel Transylvania 2",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/272_Hotel_Transylvania_2.jpg",
+      "source": "https://www.rottentomatoes.com/m/hotel_transylvania_2",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 273,
+      "ru": "Облачно, возможны осадки в виде фрикаделек",
+      "en": "Cloudy with a Chance of Meatballs",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/273_Cloudy_with_a_Chance_of_Meatballs.jpg",
+      "source": "https://www.sonypictures.com/movies/cloudywithachanceofmeatballs",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 274,
+      "ru": "Облачно 2: Месть ГМО",
+      "en": "Cloudy with a Chance of Meatballs 2",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/274_Cloudy_with_a_Chance_of_Meatballs_2.jpg",
+      "source": "https://www.sonypictures.com/movies/cloudywithachanceofmeatballs2",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 275,
+      "ru": "Смурфики",
+      "en": "The Smurfs",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/275_The_Smurfs.jpg",
+      "source": "https://www.imdb.com/title/tt0472181/mediaviewer/rm415177728/",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    },
+    {
+      "n": 276,
+      "ru": "Секретная служба Санта-Клауса",
+      "en": "Arthur Christmas",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/276_Arthur_Christmas.jpg",
+      "source": "https://www.sonypictures.com/movies/arthurchristmas",
+      "sk": "Ресми студия сайты",
+      "kind": "movie"
+    },
+    {
+      "n": 277,
+      "ru": "Пираты! Банда неудачников",
+      "en": "The Pirates! Band of Misfits",
+      "group": "08_Other_Movies",
+      "file": "08_Other_Movies/277_The_Pirates_Band_of_Misfits.jpg",
+      "source": "https://www.themoviedb.org/movie/72197-the-pirates-in-an-adventure-with-scientists/images/posters",
+      "sk": "Постерлер / промоматериалдар каталогы",
+      "kind": "movie"
+    }
+  ],
+  "pogs": [
+    {
+      "n": 1,
+      "name": "Эш",
+      "series": "pokemon",
+      "source": "https://www.milkcapmania.co.uk/Tazos/Walkers/310-Pok%C3%A9mon.html",
+      "front": "fishkalar/01-pokemon.png",
+      "back": "fishkalar/01-pokemon-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/01-Ash.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/01-Ash-%28back%29.png"
+    },
+    {
+      "n": 2,
+      "name": "Райчу",
+      "series": "pokemon",
+      "source": "https://www.milkcapmania.co.uk/Tazos/Walkers/310-Pok%C3%A9mon.html",
+      "front": "fishkalar/02-pokemon.png",
+      "back": "fishkalar/02-pokemon-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/02-%2326-Raichu.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/02-%2326-Raichu-%28back%29.png"
+    },
+    {
+      "n": 3,
+      "name": "Чикорита",
+      "series": "pokemon",
+      "source": "https://www.milkcapmania.co.uk/Tazos/Walkers/310-Pok%C3%A9mon.html",
+      "front": "fishkalar/03-pokemon.png",
+      "back": "fishkalar/03-pokemon-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/04-%23152-Chikorita.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/04-%23152-Chikorita-%28back%29.png"
+    },
+    {
+      "n": 4,
+      "name": "Тогепи",
+      "series": "pokemon",
+      "source": "https://www.milkcapmania.co.uk/Tazos/Walkers/310-Pok%C3%A9mon.html",
+      "front": "fishkalar/04-pokemon.png",
+      "back": "fishkalar/04-pokemon-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/14-%23175-Togepi.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/14-%23175-Togepi-%28back%29.png"
+    },
+    {
+      "n": 5,
+      "name": "Лугия",
+      "series": "pokemon",
+      "source": "https://www.milkcapmania.co.uk/Tazos/Walkers/310-Pok%C3%A9mon.html",
+      "front": "fishkalar/05-pokemon.png",
+      "back": "fishkalar/05-pokemon-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/23-%23249-Lugia.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/23-%23249-Lugia-%28back%29.png"
+    },
+    {
+      "n": 6,
+      "name": "Пикачу",
+      "series": "pokemon",
+      "source": "https://www.milkcapmania.co.uk/Tazos/Walkers/310-Pok%C3%A9mon.html",
+      "front": "fishkalar/06-pokemon.png",
+      "back": "fishkalar/06-pokemon-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/29-%23172-Pichu.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Tazo/UK/Pokemon/300DPI/29-%23172-Pichu-%28back%29.png"
+    },
+    {
+      "n": 7,
+      "name": "Покахонтас",
+      "series": "pocahontas",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/1069-Pocahontas.html",
+      "front": "fishkalar/07-pocahontas.png",
+      "back": "fishkalar/07-pocahontas-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/05-Pocahontas.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/Back.png"
+    },
+    {
+      "n": 8,
+      "name": "Флит",
+      "series": "pocahontas",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/1069-Pocahontas.html",
+      "front": "fishkalar/08-pocahontas.png",
+      "back": "fishkalar/07-pocahontas-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/07-Flit.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/Back.png"
+    },
+    {
+      "n": 9,
+      "name": "Поухатан",
+      "series": "pocahontas",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/1069-Pocahontas.html",
+      "front": "fishkalar/09-pocahontas.png",
+      "back": "fishkalar/07-pocahontas-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/09-Chief-Powhatan.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/Back.png"
+    },
+    {
+      "n": 10,
+      "name": "Намонтак",
+      "series": "pocahontas",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/1069-Pocahontas.html",
+      "front": "fishkalar/10-pocahontas.png",
+      "back": "fishkalar/07-pocahontas-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/15-Namontack.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/Back.png"
+    },
+    {
+      "n": 11,
+      "name": "Покахонтас пен Мико",
+      "series": "pocahontas",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/1069-Pocahontas.html",
+      "front": "fishkalar/11-pocahontas.png",
+      "back": "fishkalar/07-pocahontas-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/26-Pocahontas-%26-Meeko.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/Back.png"
+    },
+    {
+      "n": 12,
+      "name": "Покахонтас пен Мико · 2",
+      "series": "pocahontas",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/1069-Pocahontas.html",
+      "front": "fishkalar/12-pocahontas.png",
+      "back": "fishkalar/07-pocahontas-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/36-Scared-Pocahontas-%26-Meeko.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Pocahontas/300DPI/Back.png"
+    },
+    {
+      "n": 13,
+      "name": "Муфаса",
+      "series": "lion",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/190-Lion-King.html",
+      "front": "fishkalar/13-lion.png",
+      "back": "fishkalar/13-lion-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/02-Mufasa.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/Back-%28Spanish%29.png"
+    },
+    {
+      "n": 14,
+      "name": "Тимон мен Пумба",
+      "series": "lion",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/190-Lion-King.html",
+      "front": "fishkalar/14-lion.png",
+      "back": "fishkalar/13-lion-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/03-Rafiki.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/Back-%28Spanish%29.png"
+    },
+    {
+      "n": 15,
+      "name": "Симба мен Зазу",
+      "series": "lion",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/190-Lion-King.html",
+      "front": "fishkalar/15-lion.png",
+      "back": "fishkalar/13-lion-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/05-Rafiki-holding-young-Simba.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/Back-%28Spanish%29.png"
+    },
+    {
+      "n": 16,
+      "name": "Симба",
+      "series": "lion",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/190-Lion-King.html",
+      "front": "fishkalar/16-lion.png",
+      "back": "fishkalar/13-lion-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/11-Simba.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/Back-%28Spanish%29.png"
+    },
+    {
+      "n": 17,
+      "name": "Шрам",
+      "series": "lion",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/190-Lion-King.html",
+      "front": "fishkalar/17-lion.png",
+      "back": "fishkalar/13-lion-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/17-Scar.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/Back-%28Spanish%29.png"
+    },
+    {
+      "n": 18,
+      "name": "Тимон",
+      "series": "lion",
+      "source": "https://www.milkcapmania.co.uk/Panini-Caps/190-Lion-King.html",
+      "front": "fishkalar/18-lion.png",
+      "back": "fishkalar/13-lion-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/27-Timon.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Panini%20Caps/Lion%20King/300DPI/Back-%28Spanish%29.png"
+    },
+    {
+      "n": 19,
+      "name": "Суперсайян Гоку",
+      "series": "dbz",
+      "source": "https://www.milkcapmania.co.uk/Caps/471-Dragonball-Z.html",
+      "front": "fishkalar/19-dbz.png",
+      "back": "fishkalar/19-dbz-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/03.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/back.png"
+    },
+    {
+      "n": 20,
+      "name": "Суперсайяндар",
+      "series": "dbz",
+      "source": "https://www.milkcapmania.co.uk/Caps/471-Dragonball-Z.html",
+      "front": "fishkalar/20-dbz.png",
+      "back": "fishkalar/19-dbz-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/04-Super-Saiyan.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/back.png"
+    },
+    {
+      "n": 21,
+      "name": "Фриза мен Гоку",
+      "series": "dbz",
+      "source": "https://www.milkcapmania.co.uk/Caps/471-Dragonball-Z.html",
+      "front": "fishkalar/21-dbz.png",
+      "back": "fishkalar/19-dbz-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/21-Frieza-%26-Goku.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/back.png"
+    },
+    {
+      "n": 22,
+      "name": "Гохан",
+      "series": "dbz",
+      "source": "https://www.milkcapmania.co.uk/Caps/471-Dragonball-Z.html",
+      "front": "fishkalar/22-dbz.png",
+      "back": "fishkalar/19-dbz-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/32-Gohan.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/back.png"
+    },
+    {
+      "n": 23,
+      "name": "Пикколо",
+      "series": "dbz",
+      "source": "https://www.milkcapmania.co.uk/Caps/471-Dragonball-Z.html",
+      "front": "fishkalar/23-dbz.png",
+      "back": "fishkalar/19-dbz-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/46-Piccolo.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/back.png"
+    },
+    {
+      "n": 24,
+      "name": "Андроид 17 мен 18",
+      "series": "dbz",
+      "source": "https://www.milkcapmania.co.uk/Caps/471-Dragonball-Z.html",
+      "front": "fishkalar/24-dbz.png",
+      "back": "fishkalar/19-dbz-back.png",
+      "original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/49.png",
+      "reverse_original": "https://static1.milkcapmania.co.uk/Img/Caps/Dragonball%20Z/300DPI/back.png"
+    }
+  ]
+}
