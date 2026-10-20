@@ -17,7 +17,7 @@
 | `models/steve.glb` | The Perfect Steve Rigged | [Blender3D](https://sketchfab.com/3d-models/the-perfect-steve-rigged-0cffc39bdab04551bde4f8cdfbc52eca) | 3 264 |
 | `models/spongebob.glb` | SpongeBob Squarepants | [Tom](https://sketchfab.com/3d-models/spongebob-squarepants-e4d080cc271b40338d390e3912525680) | 28 701 |
 
-Creeper, Sega және Red модельдері `nostalgia.js` ішінде Three.js примитивтерімен жасалған. Модель сервисі немесе API кілті қажет емес.
+Sega және Red модельдері `nostalgia.js` ішінде Three.js примитивтерімен жасалған. Модель сервисі немесе API кілті қажет емес.
 
 ## Модель жүктеушісі
 

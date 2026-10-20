@@ -156,29 +156,6 @@
       var mesh = new T.Mesh(new T.PlaneGeometry(w, h), new T.MeshBasicMaterial({ map: map, transparent: true, depthWrite: false }));
       mesh.position.set(x, y, z); group.add(mesh); return mesh;
     }
-    function makeCreeper() {
-      var group = new T.Group();
-      function greenFace(withFace) {
-        return texture(16, 16, function (c) {
-          var colors = ['#42972e', '#6bb83e', '#88cf55', '#2f7429', '#a3d36c'];
-          for (var y = 0; y < 16; y += 2) for (var x = 0; x < 16; x += 2) {
-            c.fillStyle = colors[(x * 13 + y * 7 + x * y) % colors.length]; c.fillRect(x, y, 2, 2);
-          }
-          if (withFace) {
-            c.fillStyle = '#101c14'; c.fillRect(3, 4, 4, 4); c.fillRect(9, 4, 4, 4);
-            c.fillRect(6, 8, 4, 5); c.fillRect(4, 10, 3, 5); c.fillRect(9, 10, 3, 5);
-          }
-        }, true);
-      }
-      var bodyMat = new T.MeshStandardMaterial({ map: greenFace(false), roughness: 1 });
-      var faceMat = new T.MeshStandardMaterial({ map: greenFace(true), roughness: 1 });
-      var head = new T.Mesh(new T.BoxGeometry(.81, .81, .81), [bodyMat, bodyMat, bodyMat, bodyMat, faceMat, bodyMat]); head.position.y = .82; group.add(head);
-      var body = new T.Mesh(new T.BoxGeometry(.56, .91, .4), bodyMat); body.position.y = -.02; group.add(body);
-      [-1, 1].forEach(function (x) { [-1, 1].forEach(function (z) {
-        var foot = new T.Mesh(new T.BoxGeometry(.32, .46, .42), bodyMat); foot.position.set(x * .23, -.7, z * .24); group.add(foot);
-      }); });
-      return group;
-    }
     function makeBird() {
       var group = new T.Group();
       ball(group, 0, 0, 0, .72, .67, .6, '#df3b32');
@@ -230,7 +207,7 @@
       round(group, 1.5, .96, .025, '#101722', 0, -.03, -.20, .04);
       return group;
     }
-    var factories = { creeper: makeCreeper, sega: makeSega, bird: makeBird };
+    var factories = { sega: makeSega, bird: makeBird };
     function relaxJake(model) {
       model.updateMatrixWorld(true);
       model.traverse(function (mesh) {
@@ -292,7 +269,7 @@
       return group;
     }
     return { make: function (key) {
-      return ['jake', 'bmo', 'spongebob', 'steve', 'nokia'].indexOf(key) >= 0 ? imported(key) : (factories[key] || makeCreeper)();
+      return ['jake', 'bmo', 'spongebob', 'steve', 'nokia'].indexOf(key) >= 0 ? imported(key) : (factories[key] || makeBird)();
     } };
   }
 
@@ -300,7 +277,6 @@
     ['nokia', 'Nokia', 'Түймелі телефон', 'Батареясы бірнеше күнге жететін, ал рекордқа бір ұпай жетпей қалатын.'],
     ['jake', 'Jake', 'Subway Surfers', 'Пойыздың үстімен жүгіріп, инспектордан қашқан кез есіңде ме?'],
     ['steve', 'Steve', 'Minecraft', 'Алғашқы үйің топырақтан еді. Бірақ өз үйің болатын.'],
-    ['creeper', 'Creeper', 'Minecraft', 'Тссс… Артыңа бір қарап қой!'],
     ['sega', 'Sega', 'Қалтадағы ойын әлемі', 'Sonic, сақиналар және «тағы бір деңгей ғана».'],
     ['bmo', 'BMO', 'Adventure Time', 'Кішкентай ойын приставкасы, үлкен қиял. Математикалық!'],
     ['spongebob', 'SpongeBob', 'Бикини Боттом', '«Мен дайынмын!» — сол кездегі де, бүгінгі де көңіл күй.'],
@@ -310,7 +286,6 @@
   function fallbackArt(key) {
     var content = '';
     if (key === 'steve') content = '<path d="M50 64H107V119H50Z" fill="#20b8be"/><path d="M50 117H77V157H50ZM81 117H107V157H81Z" fill="#5553ab"/><path d="M30 66H49V118H30ZM108 66H127V118H108Z" fill="#b98767"/><path d="M47 8H111V67H47Z" fill="#bf9475"/><path d="M47 8H111V29H47Z" fill="#423024"/><path d="M57 36H72V43H57ZM87 36H102V43H87Z" fill="#fff"/><path d="M66 36H72V43H66ZM87 36H93V43H87Z" fill="#5553ab"/><path d="M68 53H91V61H68Z" fill="#57372a"/>';
-    else if (key === 'creeper') content = '<path d="M45 3H115V70H45Z" fill="#78bc49"/><path d="M55 71H105V124H55Z" fill="#589d3c"/><path d="M43 118H75V157H43ZM85 118H117V157H85Z" fill="#81c54c"/><path d="M57 25H73V41H57ZM87 25H103V41H87ZM72 41H88V57H72ZM64 49H76V64H64ZM84 49H96V64H84Z" fill="#142317"/>';
     else if (key === 'bird') content = '<path d="M54 43L57 12L73 38L80 8L88 41Z" fill="#dc3b30"/><ellipse cx="80" cy="92" rx="62" ry="54" fill="#e54135"/><ellipse cx="80" cy="119" rx="42" ry="26" fill="#fae2b9"/><ellipse cx="60" cy="79" rx="20" ry="23" fill="white"/><ellipse cx="100" cy="79" rx="20" ry="23" fill="white"/><circle cx="68" cy="81" r="7" fill="#211d25"/><circle cx="92" cy="81" r="7" fill="#211d25"/><path d="M35 52L79 64M125 52L81 64" stroke="#211d25" stroke-width="11"/><path d="M80 89L106 107L62 109Z" fill="#ffc346"/>';
     else if (key === 'jake') content = '<path d="M56 95H76V150H49ZM84 95H104L111 150H84Z" fill="#4d80b4"/><path d="M48 148H79V158H40ZM82 148H114V158H82Z" fill="#5baf51"/><path d="M46 61H113L122 104H34Z" fill="#f9f5df"/><path d="M49 61H70V109H49ZM90 61H111V109H90Z" fill="#479cd5"/><ellipse cx="80" cy="41" rx="29" ry="32" fill="#e9bc98"/><path d="M50 32C43 -4 118 -4 111 31Z" fill="#df463c"/><path d="M71 8H91V25H71Z" fill="#fff7e7"/><circle cx="70" cy="40" r="4" fill="#42352b"/><circle cx="91" cy="40" r="4" fill="#42352b"/><path d="M70 55Q80 62 91 55" fill="none" stroke="#9e5e4b" stroke-width="2"/>';
     else if (key === 'bmo') content = '<rect x="30" y="10" width="100" height="111" rx="12" fill="#59c3a7"/><rect x="43" y="22" width="74" height="51" rx="9" fill="#d4f4d6"/><circle cx="64" cy="43" r="3" fill="#243d40"/><circle cx="96" cy="43" r="3" fill="#243d40"/><path d="M70 55Q80 66 90 55" fill="none" stroke="#243d40" stroke-width="3"/><path d="M55 83V104M44 94H66" stroke="#f5db4f" stroke-width="7"/><circle cx="104" cy="99" r="9" fill="#e66167"/><path d="M56 121V149H46M103 121V149H113M30 80L13 111M130 80L147 111" fill="none" stroke="#59c3a7" stroke-width="10" stroke-linecap="round"/>';
