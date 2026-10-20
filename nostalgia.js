@@ -61,12 +61,16 @@
         context.fillText(def.blue ? String(def.point).padStart(2, '0') : '★', 0, radius * .31);
       } else {
         /* Score bands also keep the edge of the photographed hand out of view. */
-        context.fillStyle = def.blue ? '#e7faffee' : '#102638e8';
-        context.fillRect(-radius, radius * .58, radius * 2, radius * .42);
+        context.fillStyle = def.blue ? '#e7faff' : '#102638f2';
+        context.fillRect(-radius, radius * (def.blue ? .45 : .58), radius * 2, radius * .55);
         context.textAlign = 'center';
-        context.font = '900 ' + radius * (def.blue ? .21 : .115) + 'px Arial, sans-serif';
-        context.fillStyle = def.blue ? '#073549' : '#f7fcff';
-        context.fillText(def.blue ? String(def.point).padStart(2, '0') + ' point' : 'ATK ' + def.atk + '  DEF ' + def.def, 0, radius * .81);
+        context.font = '900 ' + radius * (def.blue ? .18 : .105) + 'px Arial, sans-serif';
+        if (def.blue) {
+          context.fillStyle = '#073549'; context.fillText(String(def.point).padStart(2, '0') + ' point', 0, radius * .77);
+        } else {
+          context.fillStyle = '#ff8f75'; context.fillText('ATK ' + def.atk, 0, radius * .73);
+          context.fillStyle = '#f7fcff'; context.fillText('DEF ' + def.def, 0, radius * .89);
+        }
       }
       context.strokeStyle = '#f4fbffcc'; context.lineWidth = radius * .025;
       context.beginPath(); context.arc(0, 0, radius * .98, 0, TAU); context.stroke();
@@ -128,7 +132,7 @@
     var materialCache = {};
     function material(color, options) {
       if (!options && materialCache[color]) return materialCache[color];
-      var settings = { color: color, roughness: .43, metalness: 0 };
+      var settings = { color: new T.Color(color).convertSRGBToLinear(), roughness: .43, metalness: 0 };
       for (var k in options) settings[k] = options[k];
       var result = new T.MeshStandardMaterial(settings);
       if (!options) materialCache[color] = result; return result;
@@ -387,7 +391,7 @@
     var root = document.getElementById('memoryViewer'), canvas = document.getElementById('memoryCanvas');
     if (!root || !canvas) return;
     var buttons = root.querySelectorAll('[data-memory-toy]'), current = 'jake', renderer = null, T = global.THREE;
-    var scene, camera, group = null, models, rotation = -.18, dragging = false, moved = false, startX = 0;
+    var scene, camera, group = null, models, modelCache = {}, rotation = -.18, dragging = false, moved = false, startX = 0;
     function describe(key) {
       var row = TOYS.filter(function (toy) { return toy[0] === key; })[0] || TOYS[0];
       document.getElementById('memoryName').textContent = row[1];
@@ -397,28 +401,29 @@
       canvas.setAttribute('aria-label', row[1] + ' көлемді моделі. Айналдыру үшін сүйре.');
       return row;
     }
-    function dispose(object) {
-      object.traverse(function (mesh) { if (mesh.geometry) mesh.geometry.dispose(); });
-    }
     function show(key) {
       current = key; describe(key);
       if (!renderer) return;
-      if (group) { scene.remove(group); dispose(group); }
-      group = models.make(key);
-      var bounds = new T.Box3().setFromObject(group), center = bounds.getCenter(new T.Vector3()), size = bounds.getSize(new T.Vector3());
-      group.position.sub(center); var wrapper = new T.Group(); wrapper.add(group);
-      wrapper.scale.setScalar(2.9 / Math.max(size.x, size.y, size.z));
-      group = wrapper; group.rotation.y = -.18; rotation = -.18; scene.add(group);
+      if (group) scene.remove(group);
+      if (!modelCache[key]) {
+        var model = models.make(key);
+        var bounds = new T.Box3().setFromObject(model), center = bounds.getCenter(new T.Vector3()), size = bounds.getSize(new T.Vector3());
+        model.position.sub(center); var wrapper = new T.Group(); wrapper.add(model);
+        wrapper.scale.setScalar(2.9 / Math.max(size.x, size.y, size.z));
+        modelCache[key] = wrapper;
+      }
+      group = modelCache[key]; group.position.y = 0; group.rotation.y = -.18; rotation = -.18; scene.add(group);
     }
     buttons.forEach(function (button) { button.addEventListener('click', function () { facts.hide(); show(button.dataset.memoryToy); }); });
     try {
       if (!T) throw new Error('no_webgl');
       renderer = new T.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(global.devicePixelRatio || 1, 1.5)); renderer.outputEncoding = T.sRGBEncoding;
+      renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1;
       scene = new T.Scene(); camera = new T.PerspectiveCamera(32, 1, .1, 40); camera.position.set(0, .15, 7);
-      scene.add(new T.HemisphereLight('#f8f4ff', '#78a9a4', 1.1));
-      var light = new T.DirectionalLight('#ffffff', 2.0); light.position.set(-3, 4, 5); scene.add(light);
-      light = new T.DirectionalLight('#c8d8ff', .8); light.position.set(3, 0, -2); scene.add(light);
+      scene.add(new T.HemisphereLight('#f8f4ff', '#78a9a4', .65));
+      var light = new T.DirectionalLight('#ffffff', 1.1); light.position.set(-3, 4, 5); scene.add(light);
+      light = new T.DirectionalLight('#c8d8ff', .35); light.position.set(3, 0, -2); scene.add(light);
       models = createModels(T);
       function size() {
         var w = canvas.clientWidth || 360, h = canvas.clientHeight || 340;
