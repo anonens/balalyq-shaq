@@ -38,7 +38,7 @@ button,input,textarea,select{font:inherit;color:inherit}
   -webkit-mask:radial-gradient(closest-side,#000,transparent);mask:radial-gradient(closest-side,#000,transparent);
   animation:spin 120s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-#scene{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;touch-action:pan-y}
+#scene{position:fixed;inset:0;width:100%;height:100%;height:100lvh;z-index:0;display:block;touch-action:pan-y}
 .layer{position:relative;z-index:1;pointer-events:none}
 .layer .pe, .layer a, .layer button, .layer input, .layer textarea, .layer label, .layer select, .layer canvas, .layer p, .layer h1, .layer h2, .layer h3, .layer li{pointer-events:auto}
 
@@ -74,8 +74,7 @@ button,input,textarea,select{font:inherit;color:inherit}
 .panel::before{content:"";position:absolute;inset:1px 1px auto 1px;height:42%;border-radius:calc(var(--r-lg) - 1px) calc(var(--r-lg) - 1px) 50% 50%/calc(var(--r-lg) - 1px) calc(var(--r-lg) - 1px) 24px 24px;
   background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0));pointer-events:none}
 @supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){.panel,.sec-head .lead{background:rgba(255,255,255,.9)}}
-@media (max-width:720px){*{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.panel,.sec-head .lead{background:rgba(255,255,255,.9)}}
-.lite *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.lite .panel,.lite .sec-head .lead{background:rgba(255,255,255,.9)}
+.has-3d *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.has-3d .panel,.has-3d .sec-head .lead{background:rgba(255,255,255,.9)}
 
 /* ---------- hero ---------- */
 .hero{padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:clamp(32px,5vw,64px)}
@@ -1572,7 +1571,7 @@ function initScene(){
 
   // clouds
   var ctex = cloudTex(), clouds = [];
-  for (var k = 0; k < (small ? 9 : 14); k++){
+  for (var k = 0; k < (small ? 5 : 9); k++){
     var sp = new T.Sprite(new T.SpriteMaterial({ map: ctex, transparent: true, depthWrite: false, opacity: .92 }));
     var sc = 7 + Math.random() * 9; sp.scale.set(sc, sc / 2, 1);
     sp.position.set((Math.random() - .5) * 40, 6 - Math.random() * (WORLD + 6), -10 - Math.random() * 18);
@@ -1581,8 +1580,11 @@ function initScene(){
 
   // layout
   var aspect = 1;
+  var lastW = 0, lastH = 0;
   function layout(){
-    var w = innerWidth, h = innerHeight; aspect = w / h;
+    var w = canvas.clientWidth || innerWidth, h = canvas.clientHeight || innerHeight;
+    if (w === lastW && h === lastH) return;
+    lastW = w; lastH = h; aspect = w / h;
     renderer.setSize(w, h, false); camera.aspect = aspect; camera.updateProjectionMatrix();
     var narrow = aspect < .8, tanH = Math.tan(T.MathUtils.degToRad(camera.fov / 2));
     // on tall phones the text fills more of the screen, so the park hill sits lower
@@ -1600,12 +1602,13 @@ function initScene(){
   // interaction
   var ray = new T.Raycaster(), ndc = new T.Vector2(), mx = 0, my = 0, hoverAt = 0;
   function hit(e){
-    ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(ndc, camera);
+    ndc.set(e.clientX / lastW * 2 - 1, -(e.clientY / lastH) * 2 + 1); ray.setFromCamera(ndc, camera);
     var h = ray.intersectObjects(pickables, true)[0], object = h && h.object;
     while (object && !object.userData.item) object = object.parent;
     return object ? object.userData.item : null;
   }
   window.addEventListener('pointermove', function(e){
+    if (e.pointerType !== 'mouse') return;
     mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5;
     if (e.target !== canvas){ return; }
     var now = performance.now(); if (now - hoverAt < 60) return; hoverAt = now;
@@ -1625,18 +1628,17 @@ function initScene(){
   // loop
   var clock = new T.Clock(), camY = 0, visible = true;
   document.addEventListener('visibilitychange', function(){ visible = !document.hidden; if (visible) clock.getDelta(); });
-  // if the device can't keep up, render fewer pixels, then drop the glass blur
+  // if the device can't keep up, render fewer pixels
   var perf = { last: 0, avg: 16, slow: 0, since: performance.now() + 2500 };
   function adapt(now){
     var ms = now - perf.last; perf.last = now;
     if (now < perf.since || ms > 250) return;
     perf.avg += (ms - perf.avg) * .1;
-    perf.slow = perf.avg > 24 ? perf.slow + ms : 0;
-    if (perf.slow < 1500) return;
+    perf.slow = perf.avg > 22 ? perf.slow + ms : 0;
+    if (perf.slow < 1000) return;
     perf.slow = 0; perf.since = now + 1000;
     var pr = renderer.getPixelRatio();
     if (pr > 1.01) renderer.setPixelRatio(Math.max(1, pr - .25));
-    else document.documentElement.classList.add('lite');
   }
   function frame(now){
     requestAnimationFrame(frame);

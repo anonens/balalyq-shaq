@@ -25,7 +25,8 @@
     function face(def) {
       if (faces[def.id]) return faces[def.id];
       var front = document.createElement('canvas'); front.width = front.height = 512;
-      var context = front.getContext('2d'), radius = 255;
+      // CPU-backed canvases: the blue reverse reads pixels back, which stalls a GPU canvas for seconds on phones
+      var context = front.getContext('2d', { willReadFrequently: true }), radius = 255;
       context.translate(256, 256);
       context.save();
       context.beginPath(); context.arc(0, 0, radius, 0, TAU); context.clip();
@@ -54,7 +55,7 @@
       context.beginPath(); context.arc(0, 0, radius * .98, 0, TAU); context.stroke();
       context.restore();
       var reverse = document.createElement('canvas'); reverse.width = reverse.height = 512;
-      var blueContext = reverse.getContext('2d'); blueContext.drawImage(front, 0, 0);
+      var blueContext = reverse.getContext('2d', { willReadFrequently: true }); blueContext.drawImage(front, 0, 0);
       var pixels = blueContext.getImageData(0, 0, 512, 512), data = pixels.data;
       for (var i = 0; i < data.length; i += 4) {
         var light = data[i] * .2126 + data[i + 1] * .7152 + data[i + 2] * .0722;
