@@ -872,7 +872,7 @@ function showTicket(rec, animate){
   if (special){ a2.href = loc2.link || 'https://2gis.kz/almaty'; a2.textContent = '2GIS: ' + locLabel(rec.locs[1]); }
   $('#tActions').hidden = false;
   var note = $('#tNote');
-  note.textContent = special ? 'Сіз арнайы қонақсыз: екі мекенжайға да шақырылдыңыз. Қайсысына барсаңыз да, сізді күтеміз.'
+  note.textContent = special ? 'Сіз арнайы қонақсыз: екі мекенжайға да шақырылдыңыз. Екі мекенжайда да асыға күтеміз.'
     : rec.coord ? ('Координаторың: ' + rec.coord + '. Сұрақ болса, соған жаз.') : '';
   note.hidden = !note.textContent;
   if (animate && !reduce){ card.classList.remove('flip'); void card.offsetWidth; card.classList.add('flip'); }
