@@ -1203,7 +1203,7 @@ function initScene(){
   try { renderer = new T.WebGLRenderer({ canvas: canvas, antialias: !small, alpha: true, powerPreference: 'default' }); }
   catch(e){ initSceneFallback(); return; }
   // reading shader logs forces each compile to finish synchronously, which stalls scrolling on phones
-  renderer.debug.checkShaderErrors = false;
+  if (small) renderer.debug.checkShaderErrors = false;
   canvas.dataset.renderer = 'webgl'; document.documentElement.classList.add('has-3d');
   canvas.addEventListener('webglcontextlost', function(e){ e.preventDefault(); visible = false; canvas.hidden = true; initSceneFallback(); }, { once: true });
   renderer.setPixelRatio(Math.min(devicePixelRatio || 1, small ? 1.25 : 1.75));
@@ -1622,8 +1622,8 @@ function initScene(){
 
   var warmTimer = 0;
   function warm(){ clearTimeout(warmTimer); warmTimer = setTimeout(function(){ try { renderer.compile(scene, camera); } catch(e){} }, 30); }
-  items.forEach(function(it){ if (it.obj.userData.ready) it.obj.userData.ready.then(warm); });
-  warm();
+  // phones only: on laptops the old on-demand compile ran smoother than a whole-scene compile
+  if (small){ items.forEach(function(it){ if (it.obj.userData.ready) it.obj.userData.ready.then(warm); }); warm(); }
 
   // loop
   var clock = new T.Clock(), camY = 0, visible = true;
