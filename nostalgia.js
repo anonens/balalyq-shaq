@@ -19,16 +19,9 @@
     var source = loadImage('nostalgia/chips-reference.png');
     var sponge = loadImage('posters/901.webp'), faces = {};
     var defs = [
-      { id: 'blue-48', name: 'SpongeBob · 48 point', series: 'SpongeBob', blue: true, point: 48 },
-      { id: 'hero-hulk', name: 'Hulk', series: 'Суперқаһармандар', blue: false, atk: 658522, def: 625482 },
-      { id: 'blue-13', name: 'SpongeBob · 13 point', series: 'SpongeBob', blue: true, point: 13 },
-      { id: 'hero-82', name: 'Hulk · Күш', series: 'Суперқаһармандар', blue: false, atk: 825482, def: 825482 },
-      { id: 'blue-22', name: 'SpongeBob · 22 point', series: 'SpongeBob', blue: true, point: 22 },
-      { id: 'hero-52', name: 'Hulk · Қорғаныс', series: 'Суперқаһармандар', blue: false, atk: 458452, def: 485256 },
-      { id: 'blue-02', name: 'SpongeBob · 02 point', series: 'SpongeBob', blue: true, point: 2 },
-      { id: 'hero-72', name: 'Hulk · Аула чемпионы', series: 'Суперқаһармандар', blue: false, atk: 525482, def: 585222 }
+      { id: 'spongebob', name: 'SpongeBob', blue: true, point: 48 },
+      { id: 'hulk', name: 'Hulk', blue: false }
     ];
-    defs.forEach(function (def, i) { def.n = i + 1; def.rare = i === 7; });
     function face(def) {
       if (faces[def.id]) return faces[def.id];
       var front = document.createElement('canvas'); front.width = front.height = 512;
@@ -47,20 +40,15 @@
         if (def.blue) {
           context.drawImage(image, 285, 455, 285, 285, -radius, -radius, radius * 2, radius * 2);
         } else {
-          context.drawImage(image, 146, 957, 260, 260, -radius, -radius, radius * 2, radius * 2);
+          context.drawImage(image, 185, 953, 230, 230, -radius, -radius, radius * 2, radius * 2);
         }
         context.restore();
       }
-      /* Score bands also keep the edge of the photographed hand out of view. */
-      context.fillStyle = def.blue ? '#ffe675' : '#102638f2';
-      context.fillRect(-radius, radius * (def.blue ? .45 : .58), radius * 2, radius * .55);
-      context.textAlign = 'center';
-      context.font = '900 ' + radius * (def.blue ? .18 : .105) + 'px Arial, sans-serif';
       if (def.blue) {
+        context.fillStyle = '#ffe675';
+        context.fillRect(-radius, radius * .45, radius * 2, radius * .55);
+        context.textAlign = 'center'; context.font = '900 ' + radius * .18 + 'px Arial, sans-serif';
         context.fillStyle = '#073549'; context.fillText(String(def.point).padStart(2, '0') + ' point', 0, radius * .77);
-      } else {
-        context.fillStyle = '#ff8f75'; context.fillText('ATK ' + def.atk, 0, radius * .73);
-        context.fillStyle = '#f7fcff'; context.fillText('DEF ' + def.def, 0, radius * .89);
       }
       context.strokeStyle = '#f4fbffcc'; context.lineWidth = radius * .025;
       context.beginPath(); context.arc(0, 0, radius * .98, 0, TAU); context.stroke();
@@ -80,10 +68,6 @@
       var pair = face(def);
       context.save();
       context.drawImage(back === true ? pair.back : pair.front, -radius, -radius, radius * 2, radius * 2);
-      if (back === 'locked') {
-        context.beginPath(); context.arc(0, 0, radius, 0, TAU); context.clip();
-        context.fillStyle = '#e9f4f0b0'; context.fillRect(-radius, -radius, radius * 2, radius * 2);
-      }
       context.restore();
     }
     function paint(canvas, def, back) {
@@ -95,20 +79,7 @@
       var canvas = document.createElement('canvas'); canvas.width = canvas.height = size;
       paint(canvas, def, back); return canvas;
     }
-    function asykShape(c, r) {
-      c.beginPath(); c.moveTo(-r, -.25 * r);
-      c.bezierCurveTo(-1.08 * r, -.75 * r, -.58 * r, -.75 * r, -.42 * r, -.5 * r);
-      c.bezierCurveTo(-.17 * r, -.33 * r, .17 * r, -.33 * r, .42 * r, -.5 * r);
-      c.bezierCurveTo(.58 * r, -.75 * r, 1.08 * r, -.75 * r, r, -.25 * r);
-      c.lineTo(r, .25 * r); c.bezierCurveTo(1.08 * r, .75 * r, .58 * r, .75 * r, .42 * r, .5 * r);
-      c.bezierCurveTo(.17 * r, .33 * r, -.17 * r, .33 * r, -.42 * r, .5 * r);
-      c.bezierCurveTo(-.58 * r, .75 * r, -1.08 * r, .75 * r, -r, .25 * r); c.closePath();
-    }
-    return {
-      DEFS: defs, ready: ready, draw: draw, paint: paint, render: render,
-      pick: function () { return defs[Math.floor(Math.random() * defs.length)]; },
-      asykShape: asykShape, setSprites: function () {}, setLogo: function () {}
-    };
+    return { DEFS: defs, ready: ready, draw: draw, paint: paint, render: render };
   }
 
   function createFactController(element, reduce) {
@@ -185,32 +156,6 @@
       var mesh = new T.Mesh(new T.PlaneGeometry(w, h), new T.MeshBasicMaterial({ map: map, transparent: true, depthWrite: false }));
       mesh.position.set(x, y, z); group.add(mesh); return mesh;
     }
-    function makeSteve() {
-      var group = new T.Group(), head = new T.Group(); group.add(head);
-      var face = texture(16, 16, function (c) {
-        c.fillStyle = '#b88665'; c.fillRect(0, 0, 16, 16);
-        c.fillStyle = '#32251f'; c.fillRect(0, 0, 16, 4); c.fillRect(0, 4, 2, 5); c.fillRect(14, 4, 2, 5);
-        c.fillStyle = '#e3cbb8'; c.fillRect(3, 7, 4, 2); c.fillRect(9, 7, 4, 2);
-        c.fillStyle = '#5553b2'; c.fillRect(5, 7, 2, 2); c.fillRect(9, 7, 2, 2);
-        c.fillStyle = '#8d5844'; c.fillRect(7, 9, 2, 3);
-        c.fillStyle = '#4e3027'; c.fillRect(5, 12, 6, 3); c.fillStyle = '#9d684d'; c.fillRect(7, 12, 2, 1);
-      }, true);
-      var skin = material('#b88665'), hair = material('#32251f');
-      var faceMat = new T.MeshStandardMaterial({ map: face, roughness: .9 });
-      var mesh = new T.Mesh(new T.BoxGeometry(.72, .72, .72), [hair, hair, hair, skin, faceMat, hair]); mesh.position.y = .98; head.add(mesh);
-      box(group, .75, .94, .4, '#14b7bc', 0, .17, 0);
-      box(group, .22, .20, .42, '#a7795e', 0, .57, .012);
-      [-1, 1].forEach(function (side) {
-        box(group, .27, .35, .4, '#14b7bc', side * .52, .47, 0);
-        box(group, .27, .62, .4, '#b88665', side * .52, -.015, 0);
-        box(group, .35, .91, .4, '#4945a5', side * .20, -.75, 0);
-        box(group, .35, .16, .44, '#39394c', side * .20, -1.25, .02);
-      });
-      var pickaxe = new T.Group(); pickaxe.position.set(.8, -.06, .18); pickaxe.rotation.z = -.4; group.add(pickaxe);
-      box(pickaxe, .08, .66, .08, '#715133', 0, 0, 0);
-      for (var i = 0; i < 6; i++) box(pickaxe, .11, .1, .11, '#29d7cc', -.2 + i * .1, .32 - Math.max(0, i - 3) * .08, 0);
-      return group;
-    }
     function makeCreeper() {
       var group = new T.Group();
       function greenFace(withFace) {
@@ -285,35 +230,74 @@
       round(group, 1.5, .96, .025, '#101722', 0, -.03, -.20, .04);
       return group;
     }
-    var factories = { steve: makeSteve, creeper: makeCreeper, sega: makeSega, bird: makeBird };
+    var factories = { creeper: makeCreeper, sega: makeSega, bird: makeBird };
+    function relaxJake(model) {
+      model.updateMatrixWorld(true);
+      model.traverse(function (mesh) {
+        if (!mesh.isMesh || !mesh.geometry.attributes.position) return;
+        mesh.geometry = mesh.geometry.clone();
+        var position = mesh.geometry.attributes.position, world = mesh.matrixWorld;
+        var inverse = world.clone().invert(), vertex = new T.Vector3();
+        for (var i = 0; i < position.count; i++) {
+          vertex.fromBufferAttribute(position, i).applyMatrix4(world);
+          var x = Math.abs(vertex.x);
+          if (x < .26 || vertex.y < 1.06 || vertex.y > 1.37) continue;
+          var weight = T.MathUtils.smoothstep(x, .26, .42), side = vertex.x < 0 ? -1 : 1;
+          var angle = -side * 1.26 * weight, dx = vertex.x - side * .29, dy = vertex.y - 1.255;
+          vertex.x = side * .29 + dx * Math.cos(angle) - dy * Math.sin(angle);
+          vertex.y = 1.255 + dx * Math.sin(angle) + dy * Math.cos(angle);
+          vertex.applyMatrix4(inverse); position.setXYZ(i, vertex.x, vertex.y, vertex.z);
+        }
+        position.needsUpdate = true; mesh.geometry.computeVertexNormals();
+        mesh.geometry.computeBoundingBox(); mesh.geometry.computeBoundingSphere();
+      });
+      model.userData.pose = 'relaxed-arms';
+    }
+    function boundsOf(model) {
+      model.updateMatrixWorld(true);
+      var bounds = new T.Box3(), vertex = new T.Vector3();
+      model.traverse(function (mesh) {
+        if (!mesh.isMesh || !mesh.geometry.attributes.position) return;
+        if (mesh.isSkinnedMesh) mesh.skeleton.update();
+        var positions = mesh.geometry.attributes.position;
+        for (var i = 0; i < positions.count; i++) {
+          vertex.fromBufferAttribute(positions, i);
+          if (mesh.isSkinnedMesh) mesh.boneTransform(i, vertex);
+          bounds.expandByPoint(vertex.applyMatrix4(mesh.matrixWorld));
+        }
+      });
+      return bounds;
+    }
     function imported(key) {
       var group = new T.Group(); group.userData.modelState = 'loading';
       if (!modelAssets[key]) {
         modelAssets[key] = new Promise(function (resolve, reject) {
           if (!T.GLTFLoader) { reject(new Error('model_loader_unavailable')); return; }
           new T.GLTFLoader().load('nostalgia/models/' + key + '.glb', function (gltf) {
+            if (key === 'jake') relaxJake(gltf.scene);
             resolve(gltf.scene);
           }, undefined, reject);
         });
       }
       group.userData.ready = modelAssets[key].then(function (original) {
-        var model = original.clone(true);
+        var model = key === 'steve' ? T.SkeletonUtils.clone(original) : original.clone(true);
         if (key === 'bmo') model.rotation.y += Math.PI;
-        var bounds = new T.Box3().setFromObject(model), size = bounds.getSize(new T.Vector3()), center = bounds.getCenter(new T.Vector3());
+        var bounds = boundsOf(model), size = bounds.getSize(new T.Vector3()), center = bounds.getCenter(new T.Vector3());
         var extent = Math.max(size.x, size.y, size.z);
         if (!isFinite(extent) || extent <= 0) throw new Error('empty_model');
         model.position.sub(center);
         var normalized = new T.Group(); normalized.add(model); normalized.scale.setScalar(2.6 / extent);
-        group.add(normalized); group.userData.modelState = 'ready'; return true;
+        group.add(normalized); group.userData.pose = model.userData.pose || 'original'; group.userData.modelState = 'ready'; return true;
       }).catch(function () { group.userData.modelState = 'error'; return false; });
       return group;
     }
     return { make: function (key) {
-      return key === 'jake' || key === 'bmo' || key === 'spongebob' ? imported(key) : (factories[key] || makeSteve)();
+      return ['jake', 'bmo', 'spongebob', 'steve', 'nokia'].indexOf(key) >= 0 ? imported(key) : (factories[key] || makeCreeper)();
     } };
   }
 
   var TOYS = [
+    ['nokia', 'Nokia', 'Түймелі телефон', 'Батареясы бірнеше күнге жететін, ал рекордқа бір ұпай жетпей қалатын.'],
     ['jake', 'Jake', 'Subway Surfers', 'Пойыздың үстімен жүгіріп, инспектордан қашқан кез есіңде ме?'],
     ['steve', 'Steve', 'Minecraft', 'Алғашқы үйің топырақтан еді. Бірақ өз үйің болатын.'],
     ['creeper', 'Creeper', 'Minecraft', 'Тссс… Артыңа бір қарап қой!'],
@@ -334,104 +318,8 @@
     return content ? '<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">' + content + '</svg>' : '';
   }
 
-  function initShowcase(reduce, facts) {
-    var root = document.getElementById('memoryViewer'), canvas = document.getElementById('memoryCanvas');
-    if (!root || !canvas) return;
-    var buttons = root.querySelectorAll('[data-memory-toy]'), current = 'jake', renderer = null, T = global.THREE;
-    var scene, camera, group = null, models, modelCache = {}, rotation = -.18, dragging = false, moved = false, startX = 0;
-    function describe(key) {
-      var row = TOYS.filter(function (toy) { return toy[0] === key; })[0] || TOYS[0];
-      document.getElementById('memoryName').textContent = row[1];
-      document.getElementById('memorySeries').textContent = row[2];
-      document.getElementById('memoryStory').textContent = row[3];
-      buttons.forEach(function (button) { button.setAttribute('aria-pressed', String(button.dataset.memoryToy === key)); });
-      canvas.setAttribute('aria-label', row[1] + ' көлемді моделі. Айналдыру үшін сүйре.');
-      return row;
-    }
-    var status = document.getElementById('memoryStatus');
-    function updateStatus(key, model) {
-      if (current !== key) return;
-      var state = model.userData.modelState || 'ready'; root.dataset.modelState = state;
-      status.hidden = state === 'ready';
-      status.textContent = state === 'error' ? 'Модель ашылмады. Басқа кейіпкерді таңдап көр.' : 'Кейіпкер жүктелуде…';
-      canvas.setAttribute('aria-busy', String(state === 'loading'));
-    }
-    function show(key) {
-      current = key; describe(key);
-      if (!renderer) return;
-      if (group) scene.remove(group);
-      if (!modelCache[key]) {
-        var model = models.make(key), wrapper = new T.Group(); wrapper.add(model);
-        modelCache[key] = wrapper;
-        function fit(loaded) {
-          if (loaded !== false) {
-            var bounds = new T.Box3().setFromObject(model), center = bounds.getCenter(new T.Vector3()), size = bounds.getSize(new T.Vector3());
-            var extent = Math.max(size.x, size.y, size.z);
-            if (isFinite(extent) && extent > 0) { model.position.sub(center); wrapper.scale.setScalar(2.9 / extent); }
-          }
-          updateStatus(key, model);
-        }
-        if (model.userData.ready) model.userData.ready.then(fit); else fit(true);
-      }
-      group = modelCache[key]; group.position.y = 0; group.rotation.y = -.18; rotation = -.18; scene.add(group);
-      updateStatus(key, group.children[0]);
-    }
-    buttons.forEach(function (button) { button.addEventListener('click', function () { facts.hide(); show(button.dataset.memoryToy); }); });
-    try {
-      if (!T) throw new Error('no_webgl');
-      renderer = new T.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-      renderer.setPixelRatio(Math.min(global.devicePixelRatio || 1, 1.5)); renderer.outputEncoding = T.sRGBEncoding;
-      renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = 1;
-      scene = new T.Scene(); camera = new T.PerspectiveCamera(32, 1, .1, 40); camera.position.set(0, .15, 7);
-      scene.add(new T.HemisphereLight('#f8f4ff', '#78a9a4', .65));
-      var light = new T.DirectionalLight('#ffffff', 1.1); light.position.set(-3, 4, 5); scene.add(light);
-      light = new T.DirectionalLight('#c8d8ff', .35); light.position.set(3, 0, -2); scene.add(light);
-      models = createModels(T);
-      function size() {
-        var w = canvas.clientWidth || 360, h = canvas.clientHeight || 340;
-        renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
-      }
-      var observer = new ResizeObserver(size); observer.observe(canvas); size();
-      var visible = false, last = 0;
-      var intersection = new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { rootMargin: '100px' }); intersection.observe(root);
-      function frame(now) {
-        requestAnimationFrame(frame);
-        if (!visible || document.hidden || !group) { last = now; return; }
-        var dt = Math.min(.05, (now - (last || now)) / 1000); last = now;
-        if (!dragging && !reduce) rotation += dt * .16;
-        group.rotation.y += (rotation - group.rotation.y) * (reduce ? 1 : 1 - Math.exp(-dt * 8));
-        group.position.y = reduce ? 0 : Math.sin(now * .0012) * .035;
-        renderer.render(scene, camera);
-      }
-      requestAnimationFrame(frame);
-      canvas.addEventListener('pointerdown', function (event) {
-        dragging = true; moved = false; startX = event.clientX; canvas.setPointerCapture(event.pointerId);
-      });
-      canvas.addEventListener('pointermove', function (event) {
-        if (!dragging) return;
-        var dx = event.clientX - startX; if (Math.abs(dx) > 3) moved = true;
-        rotation += dx * .012; startX = event.clientX;
-      });
-      canvas.addEventListener('pointerup', function (event) {
-        dragging = false;
-        if (!moved) { var row = describe(current); facts.show({ fact: row[3] }, event); }
-      });
-      canvas.addEventListener('pointercancel', function () { dragging = false; });
-      canvas.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-          event.preventDefault(); rotation += event.key === 'ArrowLeft' ? -.3 : .3;
-        }
-      });
-      canvas.addEventListener('webglcontextlost', function (event) { event.preventDefault(); root.classList.add('viewer-fallback'); });
-    } catch (error) {
-      renderer = null; root.classList.add('viewer-fallback'); status.hidden = true;
-      document.getElementById('memoryHint').textContent = 'Образды таңда — таныс естелікті оқы.';
-    }
-    show(current);
-  }
-
   global.Nostalgia = {
     createChips: createChips, createModels: createModels, createFactController: createFactController,
-    initShowcase: initShowcase, fallbackArt: fallbackArt, toys: TOYS
+    fallbackArt: fallbackArt, toys: TOYS
   };
 })(window);
